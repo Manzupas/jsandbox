@@ -1,24 +1,50 @@
-Partes de una caja
-Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
+Formulario adaptado a smartphone:
+    Estilos del cuerpo (body):
+        background-color: Establece el color de fondo del cuerpo de la página en un tono azul (#59abe3).
+        margin: Elimina los márgenes predeterminados del cuerpo.
+        font-family: Define la fuente de texto utilizada en todo el cuerpo de la página como "Verdana" o una fuente genérica "sans-serif" si "Verdana" no está disponible.
 
-	El contenido de la caja (o content box): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como width y height.
-	El relleno de la caja (o padding box): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad padding y otras propiedades relacionadas.
-	El borde de la caja (o border box): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad border y otras propiedades relacionadas.
-	El margen de la caja (o margin box): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad margin y otras propiedades relacionadas.
-	El diagrama siguiente muestra estas capas:
+    Estilos del formulario (form):
+        background-color: Establece el color de fondo del formulario en gris claro (#e6e6e6).
+        width y height: Definen el ancho y la altura del formulario.
+        padding: Agrega un espacio interno alrededor del contenido del formulario.
+        border-radius: Aplica un borde redondeado al formulario.
+        position, left, right, top, transform, y margin: Centra verticalmente el formulario en el medio de la página utilizando CSS flexible.
+        box-shadow: Agrega una sombra alrededor del formulario para dar profundidad.
 
-El modelo de cajas CSS estándar
-En el modelo de cajas estándar, cuando estableces los atributos width y height para una caja, defines el ancho y el alto del contenido de la caja. Cualquier área de relleno y borde se añade a ese ancho y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la imagen que encontrarás a continuación.
+    Estilos para el título del formulario (form h2):
+        color: Define el color del texto del título en gris (#78788c).
+        margin: Establece el margen del título.
+        padding-bottom y border-bottom: Crea una línea de borde inferior debajo del título.
+        display y padding-right: Hace que el título se muestre en línea y añade espacio a la derecha.
+        font-weight: Define el grosor de la fuente del título como normal.
 
-Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades width, height, margin, border, y padding:
+    Estilos para los párrafos en el formulario (form p):
+        border-bottom: Agrega una línea de borde inferior a los párrafos.
+        margin: Establece el margen vertical entre los párrafos.
 
-.box {
-  width: 350px;
-  height: 150px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
-}
+    Estilos para las etiquetas en el formulario (form label):
+        color: Define el color del texto de las etiquetas en gris (#6c6c6c).
 
+    Estilos para los campos de entrada en el formulario (form input):
+        border: Elimina el borde de los campos de entrada.
+        background-color: Establece el fondo de los campos de entrada como transparente.
+        padding: Agrega espacio interior a los campos de entrada.
+        text-indent: Indenta el texto dentro de los campos de entrada.
+        width: Define el ancho de los campos de entrada al 100%.
 
-El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.
+    Estilos para el botón en el formulario (form button):
+        border: Establece un borde alrededor del botón.
+        background-color: Establece el fondo del botón como transparente.
+        padding: Agrega espacio interior al botón.
+        color: Define el color del texto del botón.
+        float: Hace que el botón flote a la derecha del formulario.
+
+    Estilos para el elemento <div> dentro del formulario (form div):
+        background-color: Establece el fondo del elemento <div> como gris oscuro (#50505a).
+        color: Define el color del texto dentro del elemento <div> como blanco.
+        padding, border-radius, position, right, width, bottom, y box-shadow: Establece la posición y los estilos del elemento <div>, creando un efecto visual distintivo en la parte inferior derecha del formulario.
+
+    Estilos para los íconos de fuente Awesome (form div .fa y .fa):
+        font-size: Establece el tamaño de fuente de los íconos.
+        .fa:last-of-type: Añade un margen izquierdo al último ícono para separarlo de los demás.

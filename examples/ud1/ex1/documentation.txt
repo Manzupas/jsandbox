@@ -1,24 +1,62 @@
-Partes de una caja
-Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
+Se repasan estilos y maquetación con float. 
+La propiedad CSS float se utiliza para cambiar el comportamiento de posicionamiento de un elemento en relación con otros elementos en la página web. Es comúnmente utilizada para crear diseños de múltiples columnas, diseño de texto alrededor de imágenes o para lograr efectos de diseño específicos.
 
-	El contenido de la caja (o content box): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como width y height.
-	El relleno de la caja (o padding box): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad padding y otras propiedades relacionadas.
-	El borde de la caja (o border box): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad border y otras propiedades relacionadas.
-	El margen de la caja (o margin box): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad margin y otras propiedades relacionadas.
-	El diagrama siguiente muestra estas capas:
+El valor principal que puede tomar la propiedad float es uno de los siguientes:
 
-El modelo de cajas CSS estándar
-En el modelo de cajas estándar, cuando estableces los atributos width y height para una caja, defines el ancho y el alto del contenido de la caja. Cualquier área de relleno y borde se añade a ese ancho y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la imagen que encontrarás a continuación.
+    left: El elemento se desplazará hacia la izquierda y permitirá que otros elementos fluyan alrededor de su lado derecho. Por ejemplo:
 
-Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades width, height, margin, border, y padding:
-
-.box {
-  width: 350px;
-  height: 150px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
+.imagen-float {
+  float: left;
 }
 
+En este caso, si tienes un elemento de texto después de un elemento con la clase "imagen-float", el texto fluirá alrededor del lado derecho de la imagen.
 
-El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.
+right: El elemento se desplazará hacia la derecha y permitirá que otros elementos fluyan alrededor de su lado izquierdo. Por ejemplo:
+
+    .imagen-float {
+      float: right;
+    }
+
+    En este caso, el texto fluirá alrededor del lado izquierdo de la imagen.
+
+Cuando aplicas la propiedad float a un elemento, ese elemento se elimina del flujo normal del documento, lo que significa que otros elementos pueden posicionarse alrededor de él según la dirección (izquierda o derecha) que hayas especificado. Sin embargo, ten en cuenta que el uso excesivo de float puede causar problemas de diseño, como la necesidad de borrar flotantes para evitar que los elementos posteriores se superpongan al elemento flotante.
+
+Para lidiar con algunos de los problemas que pueden surgir al usar float, se suelen utilizar técnicas adicionales como "clearing floats" (borrado de flotantes) mediante la propiedad clear. Esto ayuda a asegurarse de que los elementos posteriores no se vean afectados por los elementos flotantes anteriores.
+
+
+    Estilos para el elemento body:
+        font-family: Establece la fuente de texto para el contenido del cuerpo de la página web. En este caso, se prefiere "Trebuchet MS" si está disponible, de lo contrario, "Arial" y, si aún no está disponible, una fuente genérica "sans-serif".
+        color: Define el color del texto en el cuerpo de la página en blanco (#FFF).
+        background-color: Establece el color de fondo del cuerpo de la página en gris oscuro (#555).
+
+    Estilos de encabezado para h1 a h5:
+        color: Define el color del texto de los encabezados h1 a h5 en un tono marrón oscuro (#362C20).
+
+    Estilos de fuente para h1 a h3:
+        font-family: Establece la fuente de texto para los encabezados h1 a h3. Se prefiere "Century Gothic" si está disponible, de lo contrario, "Arial". El color del texto se establece en negro (#000).
+
+    Estilos para el elemento de encabezado (header):
+        color: Establece el color del texto dentro del elemento de encabezado en negro (#000).
+        border-bottom: Agrega un borde inferior con un grosor de 1 píxel y color gris oscuro (#3d3d3d) al elemento de encabezado.
+
+    Estilos para un elemento de banner:
+        background: Establece una imagen de fondo (banner.jpg) sin repetición y con transparencia como fondo del elemento de banner. Además, agrega un borde de 10 píxeles de ancho y color gris claro (#DDD) alrededor del elemento.
+
+    Estilos para un elemento de logotipo (logo):
+        background: Define el color de fondo del elemento de logotipo en gris oscuro (#1d1d1d).
+        position: Establece la posición del elemento de logotipo como "relative", lo que permite realizar ajustes de posicionamiento más adelante.
+
+    Estilos para el texto dentro del elemento de logotipo (#logo_text):
+        position: Establece la posición del texto dentro del logotipo como "absolute", lo que permite posicionarlo con precisión.
+        top: Coloca el texto 10 píxeles desde la parte superior del elemento de logotipo.
+        left: Alinea el texto con el borde izquierdo del elemento de logotipo.
+
+    Estilos para un elemento de barra de menú (menubar):
+        width: Define el ancho del elemento de la barra de menú en 872 píxeles.
+        height: Establece la altura de la barra de menú en 45 píxeles.
+        padding-right: Agrega un relleno de 8 píxeles en el lado derecho de la barra de menú.
+        background: Establece el color de fondo de la barra de menú en gris oscuro (#2D2D2D).
+        border-top: Agrega un borde superior de 1 píxel de grosor y color gris oscuro (#3D3D3D) a la barra de menú.
+
+    Estilos para elementos de lista dentro de contenido y la barra lateral:
+        background: Establece una imagen de fondo (bullet.png) sin repetición para los elementos de lista dentro del contenido y la barra lateral.

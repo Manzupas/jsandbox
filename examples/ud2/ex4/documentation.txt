@@ -1,24 +1,22 @@
-Partes de una caja
-Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
+    Se define un elemento de video con la etiqueta <video>. Este elemento tiene los siguientes atributos y propiedades:
+        autoplay: El video se reproduce automáticamente cuando se carga la página.
+        muted: El audio del video está desactivado.
+        loop: El video se reproduce en bucle de forma continua.
+        id="myVideo": Se asigna un identificador único "myVideo" al elemento de video para que sea fácilmente seleccionable a través de JavaScript.
 
-	El contenido de la caja (o content box): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como width y height.
-	El relleno de la caja (o padding box): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad padding y otras propiedades relacionadas.
-	El borde de la caja (o border box): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad border y otras propiedades relacionadas.
-	El margen de la caja (o margin box): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad margin y otras propiedades relacionadas.
-	El diagrama siguiente muestra estas capas:
+    Se proporciona una fuente de video mediante la etiqueta <source>. Esta fuente especifica la ubicación del archivo de video ("./examples/ud2/ex4/mov_bbb.mp4") y su tipo ("video/mp4").
 
-El modelo de cajas CSS estándar
-En el modelo de cajas estándar, cuando estableces los atributos width y height para una caja, defines el ancho y el alto del contenido de la caja. Cualquier área de relleno y borde se añade a ese ancho y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la imagen que encontrarás a continuación.
+    Luego, se crea un elemento <div> con la clase "content". Este div contendrá el título, un párrafo y el botón de pausa/reproducción.
 
-Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades width, height, margin, border, y padding:
+    Dentro del <div> con la clase "content", se incluye un título <h1> con el texto "Heading" y un párrafo <p> con el texto "Lorem ipsum...". Estos elementos pueden contener cualquier contenido que desees mostrar junto al video.
 
-.box {
-  width: 350px;
-  height: 150px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
-}
+    Se agrega un botón <button> con el atributo id="myBtn" y el texto "Pause" inicialmente. Este botón es el control para pausar y reproducir el video.
 
 
-El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.
+    El código JavaScript comienza obteniendo dos elementos del documento HTML por su identificador:
+        var video = document.getElementById("myVideo");: Obtiene el elemento de video con el id "myVideo" y lo almacena en la variable video.
+        var btn = document.getElementById("myBtn");: Obtiene el botón con el id "myBtn" y lo almacena en la variable btn.
+
+    Se define una función llamada myFunction(), que se activa cuando se hace clic en el botón "Pause". Esta función realiza lo siguiente:
+        Verifica si el video está pausado utilizando video.paused. Si está pausado, lo reproduce con video.play() y cambia el texto del botón a "Pause".
+        Si el video no está pausado, lo pausa con video.pause() y cambia el texto del botón a "Play".

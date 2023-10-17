@@ -1,24 +1,25 @@
-Partes de una caja
-Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
+Seguimos trabajando con float.
 
-	El contenido de la caja (o content box): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como width y height.
-	El relleno de la caja (o padding box): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad padding y otras propiedades relacionadas.
-	El borde de la caja (o border box): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad border y otras propiedades relacionadas.
-	El margen de la caja (o margin box): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad margin y otras propiedades relacionadas.
-	El diagrama siguiente muestra estas capas:
+La propiedad CSS float se utiliza para cambiar el comportamiento de posicionamiento de un elemento en relación con otros elementos en la página web. Es comúnmente utilizada para crear diseños de múltiples columnas, diseño de texto alrededor de imágenes o para lograr efectos de diseño específicos.
 
-El modelo de cajas CSS estándar
-En el modelo de cajas estándar, cuando estableces los atributos width y height para una caja, defines el ancho y el alto del contenido de la caja. Cualquier área de relleno y borde se añade a ese ancho y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la imagen que encontrarás a continuación.
+El valor principal que puede tomar la propiedad float es uno de los siguientes:
 
-Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades width, height, margin, border, y padding:
+    left: El elemento se desplazará hacia la izquierda y permitirá que otros elementos fluyan alrededor de su lado derecho. Por ejemplo:
 
-.box {
-  width: 350px;
-  height: 150px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
+.imagen-float {
+  float: left;
 }
 
+En este caso, si tienes un elemento de texto después de un elemento con la clase "imagen-float", el texto fluirá alrededor del lado derecho de la imagen.
 
-El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.
+right: El elemento se desplazará hacia la derecha y permitirá que otros elementos fluyan alrededor de su lado izquierdo. Por ejemplo:
+
+    .imagen-float {
+      float: right;
+    }
+
+    En este caso, el texto fluirá alrededor del lado izquierdo de la imagen.
+
+Cuando aplicas la propiedad float a un elemento, ese elemento se elimina del flujo normal del documento, lo que significa que otros elementos pueden posicionarse alrededor de él según la dirección (izquierda o derecha) que hayas especificado. Sin embargo, ten en cuenta que el uso excesivo de float puede causar problemas de diseño, como la necesidad de borrar flotantes para evitar que los elementos posteriores se superpongan al elemento flotante.
+
+Para lidiar con algunos de los problemas que pueden surgir al usar float, se suelen utilizar técnicas adicionales como "clearing floats" (borrado de flotantes) mediante la propiedad clear. Esto ayuda a asegurarse de que los elementos posteriores no se vean afectados por los elementos flotantes anteriores.

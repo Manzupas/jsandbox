@@ -1,24 +1,21 @@
-Partes de una caja
-Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
+Repasamos formularios, HTML:
+<form id="login">: Aquí se define el formulario con el identificador "login". Este formulario contiene elementos de entrada para el inicio de sesión.
 
-	El contenido de la caja (o content box): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como width y height.
-	El relleno de la caja (o padding box): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad padding y otras propiedades relacionadas.
-	El borde de la caja (o border box): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad border y otras propiedades relacionadas.
-	El margen de la caja (o margin box): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad margin y otras propiedades relacionadas.
-	El diagrama siguiente muestra estas capas:
+<h1>Log In</h1>: Es un encabezado que indica el propósito del formulario, que es iniciar sesión.
 
-El modelo de cajas CSS estándar
-En el modelo de cajas estándar, cuando estableces los atributos width y height para una caja, defines el ancho y el alto del contenido de la caja. Cualquier área de relleno y borde se añade a ese ancho y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la imagen que encontrarás a continuación.
+<fieldset id="inputs">: Se utiliza para agrupar los campos de entrada (<input>) relacionados.
 
-Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades width, height, margin, border, y padding:
+<input>: Son campos de entrada de texto y contraseña con etiquetas de "Username" y "Password". Estos campos tienen atributos como id, type, placeholder, y required que los personalizan y hacen que sean obligatorios.
 
-.box {
-  width: 350px;
-  height: 150px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
-}
+<fieldset id="actions">: Este campo agrupa los elementos relacionados con las acciones del formulario, como el botón de inicio de sesión y los enlaces "Forgot your password?" y "Register".
 
+<input type="submit" id="submit" value="Log in">: Es un botón de envío que permite al usuario enviar los datos del formulario al servidor.
 
-El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.
+<a href="">Forgot your password?</a> y <a href="">Register</a>: Son enlaces que permiten al usuario realizar acciones adicionales, como restablecer la contraseña o registrarse
+
+y CSS:
+    #login: Estilos aplicados al formulario con el identificador "login". Se le agrega una sombra y se ajusta su ancho y margen.
+
+    #login:before: Crea un efecto de borde punteado alrededor del formulario.
+
+    h1: Estilos aplicados al encabezado "Log In". Cambia su color, añade un efecto de sombra y aplica estilos de fuente.
