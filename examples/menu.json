@@ -64,25 +64,27 @@
               "info": "Ejemplos"
             },
             {
-              "numero": "4",
-              "info": "Secciones"
+              "numero": "2",
+              "info": "Puzzle"
             },
             {
               "numero": "3",
               "info": "Ríos"
             },
             {
-              "numero": "2",
-              "info": "Ficha fruta"
-            },
-            {
-              "numero": "5",
+              "numero": "4",
               "info": "Cómic"
             },
             {
+              "numero": "5",
+              "info": "Ficha fruta"
+            },
+            {
               "numero": "6",
-              "info": "Puzzle"
+              "info": "Secciones"
             }
+            
+            
           ]
         }
       },

@@ -1,134 +1,105 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  margin: 0;
-}
-
-.slides {
+.contenedor{
+  width: fit-content;
+  margin: 0 auto;
   display: flex;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
+  flex-direction: column;
+}
+.superior, .inferior{
+  flex-direction: row;
+}
+.inferior{
+  display: flex;
 }
 
-.slides > .slide {
-  flex: 1;
-  height: 600px;
-  border: 2px solid #e9e8ea;
-  border-left: none;
-  position: relative;
-  background-color: white;
-  background-blend-mode: color;
-
-  background-position: center;
-  background-size: cover;
+img {
+  width: 200px;
+}
+.imagen2 {
+  width: 405px;
 }
 
-.slide:last-child {
-  border-right: none;
+/*
+Imagen izquierda arriba
+transición sobre opacidad
+*/
+.imagen1{
+  opacity: 0.1;
+  transition: opacity 2s;
 }
 
-.slide:hover {
-  animation-name: slide;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+.imagen1:hover{
+  opacity: 1;
 }
 
-@keyframes slide {
-  from {
-      background-color: white;
-  }
-  to {
-      background-color: rgba(0, 0, 0, 0.1);
-  }
+/*
+Imagen derecha arriba
+transformación sobre tamaño con transición
+*/
+.imagen2{
+    transform-origin: bottom left;
+    transition: transform 2s;
 }
 
-.slide > .titulo {
-  background-color: white;
-  text-transform: uppercase;
-  padding: 20px;
-  font-size: 24px;
-
-  border-right: 2px solid #e9e8ea;
-  border-bottom: 2px solid #e9e8ea;
-  display: inline-block;
+.imagen2:hover{
+    transform: scale(1.3);
 }
 
-.slide > .boton {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  padding-bottom: 20px;
-  padding-right: 40px;
-  display: inline-block;
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  border-bottom: 2px solid black;
+
+/*
+Imagen izquierda medio
+borde redondeado con retardo de 2s
+*/
+
+.imagen3{
+    transition: border-radius 2s;
+    transition-delay: 2s;
 }
 
-.slide > .boton::before {
-  content: "➡";
-  margin-right: 10px;
-}
-.slide:hover > .boton {
-  transition: border-color 0.5s;
-  border-color: white;
-  cursor: pointer;
+.imagen3:hover{
+    border-radius: 50px;
 }
 
-.slide:hover > .titulo {
-  background-color: black;
-  color: white;
+/*
+Imagen derecha medio
+hacerlo muy pequeño en 10s: de despacio a rápido
+*/
+
+.imagen5{
+    transition: transform 10s ease-in;
 }
 
-.slide > p {
-  position: absolute;
-  bottom: 90px;
-  padding: 30px;
-  color: white;
-  line-height: 40px;
-  font-size: 15px;
+.imagen5:hover{
+    transform: scale(0.1);
 }
 
-.slide:nth-child(1) {
-  background-image: url("./examples/ud3/ex4/img/trabajo1.jpg");
-}
-.slide:nth-child(2) {
-  background-image: url("./examples/ud3/ex4/img/trabajo2.png");
-}
-.slide:nth-child(3) {
-  background-image: url("./examples/ud3/ex4/img/trabajo3.jpg");
-}
-.slide:nth-child(4) {
-  background-image: url("./examples/ud3/ex4/img/trabajo4.jpg");
+/*
+Imagen izquierda abajo
+se mueve hacia abajo 400px despacio-rápido-despacio y termina desapareciendo
+*/
+
+.imagen6{
+    position: relative;
+    transition: all 4s;
+    top: 0px;
+    opacity: 1;
 }
 
-@media (max-width: 1320px) {
-  .slides {
-      flex-wrap: wrap;
-      position: relative;
-      transform: none;
-  }
-
-  .slides > .slide {
-      flex: 0 0 49%;
-  }
+.imagen6:hover{
+  top: 400px;
+  opacity: 0;
 }
 
-@media (max-width: 722px) {
-  .slides > .slide {
-      flex: 0 0 99%;
-  }
+
+/*
+Imagen derecha abajo
+transición sobre display, de block a none (no se puede hacer, hacer alternativa)
+*/
+
+.imagen7{
+    opacity: 1;
+    transition: opacity 3s;
 }
 
-@media (max-height: 722px) {
-  .slides > .slide {
-      flex: 0 0 99%;
-  }
+.imagen7:hover{
+    opacity: 0;
 }
