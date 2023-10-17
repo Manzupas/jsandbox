@@ -1,24 +1,22 @@
-Partes de una caja
-Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
+    Efecto de Opacidad en imagen1:
+        .imagen1 tiene una opacidad inicial baja (opacity: 0.1).
+        Al pasar el cursor sobre la imagen, la opacidad cambia gradualmente a 1 con una transición de 2 segundos (opacity 2s).
 
-	El contenido de la caja (o content box): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como width y height.
-	El relleno de la caja (o padding box): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad padding y otras propiedades relacionadas.
-	El borde de la caja (o border box): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad border y otras propiedades relacionadas.
-	El margen de la caja (o margin box): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad margin y otras propiedades relacionadas.
-	El diagrama siguiente muestra estas capas:
+    Efecto de Escala en imagen2:
+        .imagen2 utiliza una transformación de escala (transform: scale(1.3)) con un punto de origen en la parte inferior izquierda (transform-origin: bottom left) cuando se pasa el cursor sobre la imagen.
+        La transformación ocurre gradualmente durante 2 segundos (transition: transform 2s).
 
-El modelo de cajas CSS estándar
-En el modelo de cajas estándar, cuando estableces los atributos width y height para una caja, defines el ancho y el alto del contenido de la caja. Cualquier área de relleno y borde se añade a ese ancho y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la imagen que encontrarás a continuación.
+    Efecto de Borde Redondeado en imagen3:
+        .imagen3 aplica un borde redondeado a la imagen con una transición de 2 segundos (transition: border-radius 2s) que se inicia después de 2 segundos (transition-delay: 2s) de pasar el cursor sobre la imagen.
 
-Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades width, height, margin, border, y padding:
+    Efecto de Escala en imagen5:
+        .imagen5 escala la imagen a un tamaño muy pequeño (transform: scale(0.1)) en 10 segundos.
+        La transición utiliza una función de temporización "ease-in," lo que significa que la imagen comenzará a escalar despacio y luego acelerará el proceso.
 
-.box {
-  width: 350px;
-  height: 150px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
-}
+    Efecto de Desplazamiento en imagen6:
+        .imagen6 se mueve hacia abajo en 400 píxeles (top: 400px) y cambia su opacidad a 0 cuando se pasa el cursor sobre la imagen.
+        La transición dura 4 segundos y mueve la imagen hacia abajo de manera gradual.
 
-
-El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.
+    Efecto de Opacidad en imagen7:
+        .imagen7 cambia su opacidad de 1 a 0 en 3 segundos cuando se pasa el cursor sobre la imagen.
+        No cambia el atributo display directamente, pero oculta la imagen al reducir su opacidad.

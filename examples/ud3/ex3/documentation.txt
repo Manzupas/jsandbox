@@ -1,24 +1,13 @@
-Partes de una caja
-Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
+Definición de transform-origin:
 
-	El contenido de la caja (o content box): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como width y height.
-	El relleno de la caja (o padding box): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad padding y otras propiedades relacionadas.
-	El borde de la caja (o border box): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad border y otras propiedades relacionadas.
-	El margen de la caja (o margin box): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad margin y otras propiedades relacionadas.
-	El diagrama siguiente muestra estas capas:
+    Las reglas .right_featured_content y .left_featured_content establecen el punto de origen de la transformación (transform-origin) para los elementos con las clases "right_featured_content" y "left_featured_content". Esto significa que cualquier transformación, como rotación o escala, se aplicará en relación con el lado derecho o izquierdo de esos elementos, respectivamente.
 
-El modelo de cajas CSS estándar
-En el modelo de cajas estándar, cuando estableces los atributos width y height para una caja, defines el ancho y el alto del contenido de la caja. Cualquier área de relleno y borde se añade a ese ancho y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la imagen que encontrarás a continuación.
+Ajuste de transform-origin por Línea y Posición:
 
-Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades width, height, margin, border, y padding:
+    Las siguientes reglas, como .featured_line:nth-child(1)>.right_featured_content, .featured_line:nth-last-child(1)>.right_featured_content, .featured_line:nth-child(1)>.left_featured_content, y .featured_line:nth-last-child(1)>.left_featured_content, modifican el transform-origin de ciertos elementos .right_featured_content y .left_featured_content según su posición en la línea. Esto significa que los elementos en el primer y último conjunto de elementos de cada línea tendrán diferentes puntos de origen de transformación.
 
-.box {
-  width: 350px;
-  height: 150px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
-}
+Efecto de Hover en .featured_content:
 
-
-El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.
+    La regla .featured_content:hover define el comportamiento de los elementos .featured_content cuando se pasa el cursor sobre ellos.
+    Cuando se pasa el cursor sobre un elemento, se aplica una transformación de escala (transform: scale(1.025)) que hace que el elemento se agrande ligeramente.
+    Además, aumenta el tamaño del texto (font-size) y cambia el color y la sombra del texto, creando un efecto de resaltado.

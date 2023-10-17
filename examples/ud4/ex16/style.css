@@ -97,13 +97,13 @@ body {
 }
 
 .slide:nth-child(1) {
-  background-image: url("./examples/ud3/ex6/img/trabajo1.jpg");
+  background-image: url("./examples/ud4/ex16/img/trabajo1.jpg");
 }
 .slide:nth-child(2) {
-  background-image: url("./examples/ud3/ex6/img/trabajo2.png");
+  background-image: url("./examples/ud4/ex16/img/trabajo2.png");
 }
 .slide:nth-child(3) {
-  background-image: url("./examples/ud3/ex6/img/trabajo3.jpg");
+  background-image: url("./examples/ud4/ex16/img/trabajo3.jpg");
 }
 .slide:nth-child(4) {
   background-image: url("./examples/ud3/ex6/img/trabajo4.jpg");

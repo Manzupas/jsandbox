@@ -1,0 +1,21 @@
+    Elemento .onda:
+        El contenedor .onda envuelve todas las gotas de agua y se utiliza para establecer la imagen de fondo y crear el efecto general.
+
+    Configuración del Fondo:
+        El fondo del cuerpo (body) está configurado con una imagen de agua (agua.jpg) que no se repite (background-repeat: no-repeat) y se ajusta al tamaño de la ventana (background-size: cover).
+
+    Elementos .onda1, .onda2, .onda3, .onda4, y .onda5:
+        Estos elementos representan las gotas de agua individuales.
+        Se les da una posición absoluta (position: absolute) para que se puedan colocar en cualquier lugar dentro del contenedor .onda.
+        Cada gota tiene un ancho y alto de 300 píxeles, un fondo transparente, y se coloca en el borde inferior derecho del contenedor.
+
+    Animación @keyframes goteo:
+        La animación se llama "goteo" y se define con @keyframes.
+        La animación se ejecuta en un ciclo infinito (infinite) durante 4 segundos (4s).
+        Durante la animación:
+            En el inicio (0%), la gota se escala a un tamaño muy pequeño (scale: 0.1).
+            A la mitad de la animación (50%), la gota alcanza su tamaño normal (opacity: 1).
+            Al final (100%), la gota se escala a un tamaño más grande y desaparece gradualmente (scale: 6 y opacity: 0).
+
+    Retraso en la Animación:
+        Cada gota (.onda1, .onda2, .onda3, .onda4, .onda5) se anima con la misma animación "goteo", pero se aplica un retraso (animation-delay) diferente a cada una. Esto crea un efecto de goteo desfasado en las gotas de agua.

@@ -1,24 +1,32 @@
-Partes de una caja
-Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
+La principal diferencia entre una imagen normal y una imagen codificada en base64 en la web es cómo se almacenan y se entregan al navegador.
 
-	El contenido de la caja (o content box): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como width y height.
-	El relleno de la caja (o padding box): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad padding y otras propiedades relacionadas.
-	El borde de la caja (o border box): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad border y otras propiedades relacionadas.
-	El margen de la caja (o margin box): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad margin y otras propiedades relacionadas.
-	El diagrama siguiente muestra estas capas:
+    Imagen Normal:
 
-El modelo de cajas CSS estándar
-En el modelo de cajas estándar, cuando estableces los atributos width y height para una caja, defines el ancho y el alto del contenido de la caja. Cualquier área de relleno y borde se añade a ese ancho y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la imagen que encontrarás a continuación.
+        Las imágenes normales se almacenan como archivos independientes en el servidor web, generalmente en formatos como JPEG, PNG, GIF, o SVG.
 
-Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades width, height, margin, border, y padding:
+        Para mostrar una imagen normal en una página web, se debe incluir una etiqueta <img> en el HTML que apunte a la ubicación del archivo de imagen en el servidor utilizando la URL de la imagen.
 
-.box {
-  width: 350px;
-  height: 150px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
-}
+        Cuando se carga una página que contiene imágenes normales, el navegador debe realizar una solicitud HTTP adicional al servidor para recuperar cada archivo de imagen.
 
+        Las imágenes normales se almacenan en caché en el navegador, lo que significa que se pueden reutilizar en otras páginas del mismo sitio sin necesidad de volver a cargarlas desde el servidor.
 
-El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.
+        Las imágenes normales son más adecuadas para imágenes de gran tamaño, ya que el navegador solo necesita cargar las imágenes que se muestran en la página.
+
+    Imagen Codificada en Base64:
+
+        Una imagen codificada en base64 se almacena directamente en el HTML o en una hoja de estilos CSS como una cadena de texto codificada en base64. Esta cadena incluye toda la información de la imagen, como su formato y datos binarios.
+
+        Para mostrar una imagen codificada en base64, se utiliza la propiedad CSS background-image o el atributo src en la etiqueta <img>. La imagen se incrusta directamente en el código HTML o CSS.
+
+        Al cargar una página que contiene imágenes codificadas en base64, no se realiza una solicitud adicional al servidor para recuperar las imágenes, ya que los datos de la imagen están incluidos en el propio código de la página.
+
+        Las imágenes codificadas en base64 son adecuadas para imágenes pequeñas, íconos, o elementos decorativos, ya que su inclusión directa en el HTML o CSS aumenta el tamaño de esos archivos.
+
+        Si se usan imágenes codificadas en base64 en múltiples lugares de un sitio web, se pueden aumentar el tamaño de las páginas y hacer que el sitio sea menos eficiente, ya que los datos de la imagen se repiten en cada página.
+
+Transiciones:
+
+Transición al Pasar el Cursor:
+
+    El selector .puzzle img:hover se activa cuando el cursor se coloca sobre una imagen dentro del contenedor .puzzle.
+    opacity: 1; cambia la opacidad de la imagen a 1, lo que la hace completamente visible cuando se pasa el cursor sobre ella.
