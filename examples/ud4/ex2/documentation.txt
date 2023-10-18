@@ -1,1 +1,37 @@
-Realizar un circuito eléctrico sencillo que muestre un punto de electricidad recorriendo el circuito y encendiendo una bombilla.
+Realizar un circuito eléctrico sencillo que muestre un punto de electricidad recorriendo el circuito y encendiendo una bombilla sincronizada.
+
+HTML:
+
+    En el HTML, tienes una imagen de un circuito con la clase .circuito, una chispa representada como un div con la clase .chispa, y una bombilla también representada como un div con la clase .bombilla.
+
+CSS:
+
+    Reset de Estilos:
+        Se eliminan los márgenes y rellenos predeterminados y se establece que el cuerpo (body) y el html tengan una altura del 100% para centrar contenido verticalmente.
+
+    Estilos del Contenedor .chispa:
+        La chispa es un div que se anima para moverse a lo largo de un circuito y parpadear.
+        La animación mover-chispa mueve la chispa a través del circuito en varias etapas.
+        La animación parapadear hace que la chispa parpadee a medida que se desplaza.
+        La chispa comienza con una posición en la parte inferior izquierda del circuito y se desplaza por un camino predefinido.
+        Durante la animación, la chispa aparece y desaparece, lo que simula el parpadeo.
+
+    Estilos del Contenedor .contenido:
+        El contenedor .contenido se utiliza para posicionar la chispa y la bombilla en relación con el circuito.
+
+    Estilos de la .bombilla:
+        La bombilla es un div que se anima para encenderse.
+        La animación encender-bombilla hace que la bombilla cambie su opacidad gradualmente para simular que se enciende.
+        La animación de encendido comienza después de un retraso de 3 segundos.
+
+    Animaciones:
+        Se definen cuatro animaciones, mover-chispa, parapadear, encender-bombilla, y parapadear.
+
+    Animación mover-chispa:
+        Esta animación hace que la chispa se mueva a través de un camino definido, simulando un movimiento a lo largo del circuito.
+
+    Animación parapadear:
+        La animación parapadear hace que la chispa cambie su escala para simular el parpadeo.
+
+    Animación encender-bombilla:
+        Esta animación hace que la bombilla cambie su opacidad gradualmente para simular que se enciende.

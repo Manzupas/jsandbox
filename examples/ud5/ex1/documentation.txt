@@ -1,0 +1,17 @@
+HTML:
+
+    En el cuerpo (<body>) de la página, hay tres elementos <div> con las clases div1, div2 y div3. Cada uno de estos elementos representa una sección de contenido en la página.
+
+CSS:
+
+    En las reglas CSS para el html y el body, se establece que estos elementos deben ocupar todo el ancho y alto de la ventana gráfica (width: 100%; height: 100%;) y se quita cualquier margen predeterminado (margin: 0;) que puedan tener.
+
+    Cada uno de los elementos <div> (.div1, .div2 y .div3) tiene una altura definida (height) y una imagen de fondo (background-image) asignada.
+
+    La clase .parallax se aplica a los elementos <div>. Esta clase agrega efectos de paralaje a los elementos, lo que significa que sus imágenes de fondo se desplazarán a diferentes velocidades a medida que el usuario haga scroll en la página. Los estilos específicos de .parallax son:
+        background-attachment: fixed;: Esto hace que la imagen de fondo esté fija en su posición mientras se desplaza la página, creando el efecto de paralaje.
+        background-position: center;: Centra la imagen de fondo vertical y horizontalmente.
+        background-repeat: no-repeat;: Evita que la imagen de fondo se repita.
+        background-size: cover;: Escala la imagen de fondo para que cubra todo el elemento <div>.
+
+Se crea una página web con tres secciones apiladas verticalmente, cada una con una imagen de fondo y un efecto de parallax. A medida que el usuario desplaza la página, las imágenes de fondo se desplazan a diferentes velocidades, lo que agrega un efecto visual atractivo a la página.

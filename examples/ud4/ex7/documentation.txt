@@ -1,1 +1,37 @@
 Utiliza una imagen de un circuito de coches para generar un camino con SVG y realiza una animación de varios coches recorriendo el circuito.
+
+Utilizamos animatemotion:
+<animateMotion> es un elemento dentro de SVG que se utiliza para animar la posición y la rotación de un objeto a lo largo de una ruta definida. Permite que un objeto se mueva a lo largo de una trayectoria específica, siguiendo la ruta de una manera que se puede controlar. Algunas de las propiedades clave de <animateMotion> incluyen:
+
+    xlink:href: Es un atributo que apunta a la ruta que el objeto animado seguirá. La ruta se define en otro elemento SVG, generalmente un elemento <path>.
+
+    dur: Indica la duración de la animación. Puedes especificar cuánto tiempo debería tomar para que el objeto se mueva a lo largo de la ruta.
+
+    repeatCount: Determina cuántas veces se repetirá la animación. Puedes establecerlo en un número específico o en "indefinido" para que la animación continúe de forma indefinida.
+
+    rotate: Permite controlar la rotación del objeto a medida que se mueve a lo largo de la ruta. Puedes configurarlo en "auto" para que el objeto gire automáticamente según su dirección de movimiento.
+
+    HTML:
+
+    Se proporciona una imagen de fondo que representa un circuito de carreras en el contenedor <img> con la clase .circuito.
+    Se utilizan elementos <svg> para definir tres rutas para los coches, y se adjunta una imagen de coche a cada una de ellas. Cada <svg> tiene su propia clase .path, y las imágenes de los coches se colocan en la ruta definida en el atributo xlink:href. Cada <svg> también tiene su propia duración de animación dur.
+
+CSS:
+
+    Reset de Estilos:
+        Se establece un margen general y se centra el contenido verticalmente y horizontalmente en la pantalla.
+
+    Estilos del Contenido:
+        El contenedor principal tiene la clase .contenido y se posiciona como relativo.
+
+    Estilos de la Ruta (<svg>) y el Coche (<image>):
+        Se definen las clases .path para los elementos <svg>. Estos elementos se posicionan como absolutos en un lugar específico en la pantalla.
+        La imagen del coche se coloca en cada ruta utilizando xlink:href.
+
+Animaciones:
+
+    Para cada coche, se define una animación de movimiento utilizando <animateMotion> en la ruta definida en xlink:href. Esta animación simula el movimiento del coche siguiendo la ruta durante un período de tiempo específico (definido en dur).
+
+    El atributo repeatCount se establece en "2", lo que significa que la animación se repetirá dos veces antes de detenerse.
+
+    El atributo rotate se establece en "auto", lo que permite que el coche gire automáticamente mientras sigue la ruta.

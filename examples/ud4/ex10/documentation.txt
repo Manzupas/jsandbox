@@ -1,0 +1,31 @@
+HTML:
+
+    Se utilizan dos botones de radio con los identificadores "a" y "b" y el atributo name para agruparlos. Esto asegura que solo se pueda seleccionar uno de los dos botones a la vez.
+
+    La tarjeta consta de dos caras: "delante" y "atras". Cada cara se representa como un <div> con las clases correspondientes.
+
+    Dentro de estas caras, se incluye contenido de texto, títulos, párrafos y etiquetas para alternar entre las caras.
+
+CSS:
+
+    El CSS define el aspecto y el comportamiento de la tarjeta y sus caras.
+
+    Se establece el box-sizing en "border-box" y se elige una fuente (font-family: Arial, Helvetica, sans-serif) para todo el contenido.
+
+    Los botones de radio se ocultan visualmente con display: none.
+
+    La tarjeta y sus caras se definen con un ancho, un alto y un borde redondeado para darle la forma de una tarjeta.
+
+    Se establece transform-style: preserve-3d para la tarjeta, lo que permite aplicar transformaciones 3D a sus caras.
+
+    La cara "delante" tiene un borde plateado y un fondo blanco, mientras que la cara "atras" tiene una imagen de fondo.
+
+    Los textos se centran y se ajusta el estilo y el espaciado del texto.
+
+    Se definen estilos específicos para la etiqueta label#boton2 para cambiar su apariencia.
+
+    Cuando el usuario pasa el cursor sobre las etiquetas, se cambia el color del texto y el fondo.
+
+    Se utiliza CSS para controlar la animación de la tarjeta. Cuando el botón de radio "b" está marcado, la tarjeta rota 180 grados, mostrando la cara "atras". Cuando el botón de radio "a" está marcado, la tarjeta regresa a su posición original.
+
+    Se definen dos animaciones (@keyframes) llamadas "rotar" y "rotar2" para controlar la rotación de la tarjeta en ambas direcciones.

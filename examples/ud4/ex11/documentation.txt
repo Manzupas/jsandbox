@@ -1,24 +1,27 @@
-Partes de una caja
-Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:
+Cada diapositiva tiene una imagen de fondo que cambia de color al pasar el cursor sobre ella.
 
-	El contenido de la caja (o content box): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como width y height.
-	El relleno de la caja (o padding box): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad padding y otras propiedades relacionadas.
-	El borde de la caja (o border box): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad border y otras propiedades relacionadas.
-	El margen de la caja (o margin box): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad margin y otras propiedades relacionadas.
-	El diagrama siguiente muestra estas capas:
+HTML:
 
-El modelo de cajas CSS estándar
-En el modelo de cajas estándar, cuando estableces los atributos width y height para una caja, defines el ancho y el alto del contenido de la caja. Cualquier área de relleno y borde se añade a ese ancho y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la imagen que encontrarás a continuación.
+    Se utiliza una sección con la clase .slides para contener las diapositivas.
 
-Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades width, height, margin, border, y padding:
+    Se crean cuatro diapositivas usando elementos <article> con la clase .slide. Cada diapositiva contiene un título, un párrafo y un botón "Learn more".
 
-.box {
-  width: 350px;
-  height: 150px;
-  margin: 10px;
-  padding: 25px;
-  border: 5px solid black;
-}
+    Los títulos se dividen en dos partes utilizando elementos <div> con las clases .top y .bottom. Esto crea un efecto de dos líneas de texto en el título.
 
+CSS:
 
-El espacio que ocupa nuestra caja usando el modelo de cajas estándar será en realidad de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.
+    Se establece la fuente global en Arial, Helvetica o una fuente genérica de tipo sans-serif, y se elimina el margen predeterminado del cuerpo (body).
+
+    La sección de diapositivas (.slides) se muestra como una fila de elementos flexibles (display: flex) con una disposición horizontal.
+
+    Cada diapositiva (.slide) se ajusta automáticamente al espacio disponible utilizando flex: 1. Además, se definen otros estilos, como un borde, un fondo blanco y el tamaño y posición del fondo de la imagen.
+
+    Al pasar el cursor sobre una diapositiva, se activa una animación llamada slide. Esto cambia el fondo de color de la diapositiva de blanco a un tono gris claro.
+
+    Los títulos y los botones de las diapositivas tienen estilos específicos para el fondo, el tamaño de fuente y el diseño. Los botones tienen un contenido adicional en forma de una flecha (::before).
+
+    Cuando se pasa el cursor sobre una diapositiva, tanto el botón como el título cambian de estilo para que se vean con fondo negro y texto blanco. También cambia el color del borde inferior del botón.
+
+    Se establece una imagen de fondo diferente para cada diapositiva utilizando background-image y se proporcionan imágenes de muestra para cada diapositiva.
+
+    El CSS incluye reglas de medios (@media) para controlar el diseño de las diapositivas en diferentes tamaños de pantalla o resoluciones. Por ejemplo, en pantallas más pequeñas, las diapositivas pueden ajustarse y mostrar menos diapositivas por fila.

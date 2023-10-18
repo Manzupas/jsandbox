@@ -1,1 +1,22 @@
 Recorre un circuito sencillo con un coche en el hover del ratón.
+
+CSS:
+
+    Reset de Estilos:
+        Se establece un margen general, el modelo de caja y el ancho del contenedor .circuito-container para centrar el circuito y el coche.
+
+    Estilos del Circuito y el Coche:
+        Se establece el ancho y la posición de las imágenes del circuito (#circuito) y el coche (#coche).
+        El coche se posiciona inicialmente en la parte superior izquierda del contenedor .circuito-container usando transformaciones.
+        Se define la animación de movimiento para el coche (#coche) usando @keyframes llamada move. La animación simula el movimiento del coche a lo largo de un camino predefinido.
+
+    Control de la Animación:
+        Se establece la propiedad animation-play-state en paused para la animación del coche inicialmente, lo que detiene la animación. La idea es que la animación del coche se inicie cuando se pasa el cursor sobre el coche.
+
+    Pseudo-clase :hover:
+        Cuando el cursor se pasa sobre el coche (#coche:hover), se cambia la propiedad animation-play-state a running, lo que inicia la animación del coche.
+
+    Animación move:
+        La animación move hace que el coche se mueva a lo largo de un camino definido. Esto se logra utilizando transformaciones (translate y rotate) en diferentes puntos de tiempo (porcentajes).
+
+La animación simula el movimiento del coche a través del circuito, y se inicia cuando se pasa el cursor sobre el coche. La velocidad y el recorrido del coche están definidos en la animación move.
