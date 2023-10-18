@@ -1,0 +1,1 @@
+Mostrar una papelera que al poner el ratón encima se abra y se lance una bola de papel a la basura.

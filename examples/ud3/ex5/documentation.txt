@@ -1,0 +1,1 @@
+Este ejercicio muestra una carta y al hacer hover se da la vuelta.

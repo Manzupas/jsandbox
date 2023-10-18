@@ -1,0 +1,25 @@
+Preloader/Loader.
+
+El código crea un simple indicador de carga en forma de círculo giratorio que gira continuamente en un ciclo de 1 segundo. Este tipo de indicador de carga es comúnmente utilizado en sitios web para mostrar que una acción está en progreso. El enlace en la parte superior te dirige a una página con más ejemplos de indicadores de carga.
+
+HTML:
+
+    El HTML contiene dos secciones:
+        Un encabezado con un título "Más loaders en:" y un enlace a la página "CSSLOADERS" que se abrirá en una nueva ventana o pestaña del navegador.
+        Un div con la clase .loader que se utiliza para mostrar el indicador de carga.
+
+CSS:
+
+    El CSS se encarga de estilizar y animar el indicador de carga (el círculo giratorio).
+
+    Estilos del .loader:
+        Se establece el ancho y alto del círculo en 48px, lo que crea un círculo de 48x48 píxeles.
+        El borde del círculo tiene un ancho de 5px y se establece en rojo (rgb(255, 0, 0)).
+        border-bottom-color se establece como "transparent" para que la parte inferior del círculo sea invisible, creando así una apariencia de semicírculo.
+        border-radius se establece en 50% para que el círculo sea completamente redondo.
+        display se establece en "inline-block" para que el círculo esté en línea con otros elementos si es necesario.
+        box-sizing se establece en "border-box" para incluir el borde en el cálculo del tamaño del círculo.
+
+    Animación rotation:
+        Se define una animación llamada "rotation" utilizando @keyframes.
+        La animación hace que el círculo gire de 0 a 360 grados en 1 segundo (1s) con una velocidad "linear" y en un bucle infinito.

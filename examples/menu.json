@@ -77,14 +77,20 @@
             },
             {
               "numero": "5",
-              "info": "Ficha fruta"
+              "info": "Carta Pokémon"
             },
             {
               "numero": "6",
-              "info": "Secciones"
+              "info": "Carta informativa"
+            },
+            {
+              "numero": "7",
+              "info": "Juego Pokémon"
+            },
+            {
+              "numero": "8",
+              "info": "Ficha fruta"
             }
-            
-            
           ]
         }
       },
