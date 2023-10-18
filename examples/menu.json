@@ -30,22 +30,26 @@
             {
               "numero": "6",
               "info": "Webs de repaso"
+            },
+            {
+              "numero": "7",
+              "info": "Menú desplegable"
             }
           ]
         }
       },
       {
         "numero": "2",
-        "titulo": "Utilidades y Multimedia",
+        "titulo": "Multimedia",
         "ejemplos": {
           "ej": [
             {
               "numero": "1",
-              "info": "Menú desplegable sencillo"
+              "info": "Trabajo con imágenes"
             },
             {
               "numero": "2",
-              "info": "Menú desplegable complicado"
+              "info": "Audio"
             },
             {
               "numero": "3",
