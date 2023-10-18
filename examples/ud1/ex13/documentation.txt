@@ -1,0 +1,2 @@
+Crea una página web cuyo contenido sea la estructura básica de HTML5, con el siguiente
+aspecto.
