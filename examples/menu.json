@@ -105,15 +105,15 @@
             },
             {
               "numero": "2",
-              "info": "Timer"
+              "info": "Circuito eléctrico"
             },
             {
               "numero": "3",
-              "info": "Papelera"
+              "info": "Timer"
             },
             {
               "numero": "4",
-              "info": "Circuito eléctrico"
+              "info": "Papelera"
             },
             {
               "numero": "5",
@@ -121,35 +121,27 @@
             },
             {
               "numero": "6",
-              "info": "Circuito"
+              "info": "Circuito sencillo"
             },
             {
               "numero": "7",
-              "info": "Circuito2"
+              "info": "Circuito competición"
             },
             {
               "numero": "8",
-              "info": "Slider"
-            },
-            {
-              "numero": "9",
               "info": "Loader"
             },
             {
-              "numero": "11",
-              "info": "Carta"
+              "numero": "9",
+              "info": "Slider"
             },
             {
-              "numero": "12",
-              "info": "Baraja"
-            },
-            {
-              "numero": "13",
-              "info": "Carta informativa"
-            },
-            {
-              "numero": "14",
+              "numero": "10",
               "info": "Información Piso"
+            },
+            {
+              "numero": "11",
+              "info": "Secciones"
             }
           ]
         }

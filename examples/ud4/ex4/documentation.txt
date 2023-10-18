@@ -1,1 +1,1 @@
-Realizar un circuito eléctrico sencillo que muestre un punto de electricidad recorriendo el circuito y encendiendo una bombilla.
+Mostrar una papelera que al poner el ratón encima se abra y se lance una bola de papel a la basura.

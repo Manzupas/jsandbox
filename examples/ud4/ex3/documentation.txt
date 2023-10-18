@@ -1,1 +1,1 @@
-Mostrar una papelera que al poner el ratón encima se abra y se lance una bola de papel a la basura.
+El objetivo es realizar un ejercicio que muestre un reloj dando vueltas y que haya una barra de progreso que vaya cambiando el color según el progreso que lleva realizado. Que vaya cambiando de color de manera progresiva y que al llegar al 80% de progreso baje al 20 y luego siga subiendo.
