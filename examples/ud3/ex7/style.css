@@ -27,7 +27,7 @@
 }
 
 .reverso {
-  background-image: url('./examples/ud4/ex12/img/reverso_original.png');
+  background-image: url('./examples/ud3/ex7/img/reverso_original.png');
   z-index: 1;
   transition: all 0.5s;
 }
@@ -38,15 +38,15 @@
 }
 
 #pikachu .anverso {
-  background-image: url('./examples/ud4/ex12/img/pikachu.png');
+  background-image: url('./examples/ud3/ex7/img/pikachu.png');
 }
 
 #mimikyu .anverso {
-  background-image: url('./examples/ud4/ex12/img/mimikyu.png');
+  background-image: url('./examples/ud3/ex7/img/mimikyu.png');
 }
 
 #mew .anverso {
-  background-image: url('./examples/ud4/ex12/img/mew.png');
+  background-image: url('./examples/ud3/ex7/img/mew.png');
 }
 
 .carta:hover {

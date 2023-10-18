@@ -30,11 +30,11 @@
 }
 
 #mew .reverso{
-  background: url('./examples/ud4/ex11/img/reverso.jpg');
+  background: url('./examples/ud3/ex5/img/reverso.jpg');
   background-size: contain;
 }
 #mew .anverso{
- background: url('./examples/ud4/ex11/img/anverso.jpg');
+ background: url('./examples/ud3/ex5/img/anverso.jpg');
  background-size: cover;
 }
 

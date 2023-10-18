@@ -1,0 +1,13 @@
+Parallax Firewatch
+
+La propiedad perspective se utiliza en el elemento contenedor con el id "parallax". En este contexto, perspective se utiliza para crear el efecto de paralaje. Aquí hay una explicación de lo que está sucediendo:
+
+    perspective: 100px;: Esto establece el punto de vista (perspectiva) desde el cual se observará el efecto de paralaje. En este caso, el punto de vista se establece a 100px. Cuanto mayor sea el valor, más profundo parecerá el efecto de paralaje.
+
+    overflow-x: hidden;: Esta regla oculta el desplazamiento horizontal (scroll) en el contenedor, lo que significa que solo se permitirá el desplazamiento vertical. Esto es importante para crear un efecto de paralaje suave y evitar desplazamientos laterales no deseados.
+
+    position: absolute; top: 0; left: 50%; right: 0; bottom: 0;: Esto se utiliza para posicionar el contenedor en pantalla, cubriendo toda la ventana del navegador. Al establecer left: 50%, el contenedor se centra horizontalmente.
+
+    margin-left: -900px;: Esto ajusta el margen izquierdo para centrar las capas en el punto de vista de la perspectiva.
+
+El contenedor con id "parallax" actúa como el punto de vista desde el cual se observan las capas en el efecto de paralaje. Las imágenes de fondo de las capas individuales dentro del contenedor se desplazan y escalan según la propiedad transform en respuesta al desplazamiento de la página, creando así el efecto de paralaje en múltiples capas. La perspectiva juega un papel importante al determinar cómo se ven afectadas estas capas en función de su proximidad al punto de vista de la perspectiva.
