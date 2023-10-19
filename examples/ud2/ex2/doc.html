@@ -1,30 +1,49 @@
-<div class="dots" onclick="this.classList.toggle('active');">
-	<div class="dot"></div>
-	<div class="dot"></div>
-	<div class="shadow cut"></div>
-	<div class="container cut">
-	  <div class="drop cut2"></div>
+<h1>Mask image</h1>
+
+<div class="showbox grey">
+	<h2>Mask with Div</h2>
+	<p>Image as background in 3 divs;</p>
+	<div class="threeSplitImage" style="--img:url(https://images.unsplash.com/photo-1550853123-b81beb0b1449?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTc0NjEzOTF8&ixlib=rb-4.0.3&q=85);">
+		<div class="rowstart_3"></div>
+		<div class="rowstart_2"></div>
+		<div class="rowstart_1"></div>
 	</div>
-	<div class="list">
-	  <ul>
-		<li>
-		  Mark as read
-		</li>
-		<li>
-		  Flag as important
-		</li>
-		<li>
-		  Save for later
-		</li>
-		<li>
-		  Move to trash
-		</li>
-		<li>
-		  Mark as spam
-		</li>
-	  </ul>
+</div>
+
+<div class="showbox">
+	<h2>Mask with Div</h2>
+	<p>with CSS mix-blend-mode; works only on white; easy customizable with multiple columns;</p>
+
+	<div class="imageMaskDiv" style="--ratio:2/1;">
+		<img src="https://images.unsplash.com/photo-1568995430555-091fd9226ed3?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTc0NjcwMTV8&ixlib=rb-4.0.3&q=85">
+		<div class="mask" style="--gColumns:repeat(3, 1fr) 2fr">
+			<div style="--row:2 / span 3;"></div>
+			<div style="--row:1 / span 3;"></div>
+			<div style="--row:2 / span 3;"></div>
+			<div style="--row:3 / span 3;"></div>
+		</div>
 	</div>
-	<div class="dot"></div>
-  </div>
-  <div class="cursor"
-	   onclick="document.querySelector('.dots').classList.toggle('active');"></div>
+</div>
+
+
+<!-- Mask with SVG -->
+
+<div class="showbox"> 
+	<h2>Mask with SVG</h2>
+	<p>CSS clip-path; rigid (needs several svg masks for alternative visualizations)</p>
+	<div class="imageMaskSVG">
+		<img src="https://images.unsplash.com/photo-1628853210688-acf6bfeb5daf?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTc0NjcxMTZ8&ixlib=rb-4.0.3&q=85">
+	</div>
+	<svg width="0" height="0">
+		<defs>
+			<clipPath id="mask1" clipPathUnits="objectBoundingBox">
+				<path d="M0.6707,0.785H0.3293c-0.0177,0-0.032-0.0111-0.032-0.0247V0.2097c0-0.0136,0.0143-0.0247,0.032-0.0247h0.3413
+					c0.0177,0,0.032,0.0111,0.032,0.0247v0.5506C0.7027,0.7739,0.6883,0.785,0.6707,0.785z"/>
+				<path d="M0.2529,0.6962H0.0217C0.0097,0.6962,0,0.6851,0,0.6715V0.1209c0-0.0136,0.0097-0.0247,0.0217-0.0247h0.2312
+					c0.012,0,0.0217,0.0111,0.0217,0.0247v0.5506C0.2746,0.6851,0.2649,0.6962,0.2529,0.6962z"/>
+				<path d="M0.9783,0.9057H0.7471c-0.012,0-0.0217-0.0111-0.0217-0.0247V0.3304c0-0.0136,0.0097-0.0247,0.0217-0.0247h0.2312
+					C0.9903,0.3057,1,0.3168,1,0.3304V0.881C1,0.8946,0.9903,0.9057,0.9783,0.9057z"/>
+			</clipPath>
+		</defs>
+	</svg>
+</div>
