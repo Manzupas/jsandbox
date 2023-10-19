@@ -8,32 +8,59 @@
           "ej": [
             {
               "numero": "1",
-              "info": "Repaso de CSS: Test inicial"
+              "info": "Repaso Selectores CSS Guiado"
             },
             {
               "numero": "2",
-              "info": "HTML y CSS: Instagram Rosalía"
+              "info": "Repaso Selectores CSS Sencillo"
             },
             {
               "numero": "3",
-              "info": "HTML y CSS: Plantilla",
-              "enunciado": "Debes crear....."
+              "info": "Repaso Selectores CSS Acumulativo 1"
             },
             {
               "numero": "4",
-              "info": "HTML y CSS: Formulario sobrio"
+              "info": "Repaso Selectores CSS Acumulativo 2"
             },
             {
               "numero": "5",
-              "info": "HTML y CSS: Formulario de contacto"
+              "info": "Repaso Selectores CSS Acumulativo 3"
             },
             {
               "numero": "6",
-              "info": "Webs de repaso"
+              "info": "Diseño responsive en HTML5 1"
             },
             {
               "numero": "7",
-              "info": "Menú desplegable"
+              "info": "Diseño responsive en HTML5 2"
+            },
+            {
+              "numero": "8",
+              "info": "Menús desplegables"
+            },
+            {
+              "numero": "9",
+              "info": "HTML y CSS: Formulario sobrio"
+            },
+            {
+              "numero": "10",
+              "info": "HTML y CSS: Formulario de contacto"
+            },
+            {
+              "numero": "11",
+              "info": "Webs de repaso"
+            },
+            {
+              "numero": "12",
+              "info": "Repaso de CSS: Test inicial"
+            },
+            {
+              "numero": "13",
+              "info": "HTML y CSS: Instagram Rosalía"
+            },
+            {
+              "numero": "14",
+              "info": "HTML y CSS: Plantilla"
             }
           ]
         }

@@ -1,0 +1,55 @@
+Trabajamos con flex
+La propiedad CSS flex se utiliza junto con otras propiedades relacionadas para crear diseños flexibles y controlar cómo se distribuyen y alinean los elementos hijos dentro de un contenedor. Esta propiedad es parte del modelo de diseño flexible de CSS, conocido como Flexbox (o Flexbox Layout).
+
+El modelo Flexbox permite diseñar diseños de manera más eficiente y controlada en una sola dimensión (ya sea horizontal o vertical). Aquí se explica cómo funciona:
+
+    Elementos Flex y Contenedor Flex:
+        Para utilizar Flexbox, primero debes definir un contenedor flex (elemento padre) alrededor de los elementos que deseas controlar. Este contenedor se convierte en un contexto de diseño flexible.
+
+
+.contenedor-flex {
+  display: flex;
+}
+
+Alineación de Elementos Hijos:
+
+    Una de las características clave de Flexbox es la capacidad de alinear elementos hijos dentro del contenedor flex en la dirección principal (ya sea horizontal o vertical).
+    Puedes utilizar las propiedades justify-content para la dirección principal horizontal y align-items para la dirección principal vertical para controlar la alineación de los elementos hijos.
+
+
+.contenedor-flex {
+  display: flex;
+  justify-content: center; /* Centra los elementos en horizontal */
+  align-items: center; /* Centra los elementos en vertical */
+}
+
+Distribución de Espacio:
+
+    Flexbox también permite controlar cómo se distribuye el espacio disponible entre los elementos hijos.
+    Puedes utilizar la propiedad flex-grow para especificar cómo un elemento hijo debe crecer en relación con los demás.
+    La propiedad flex-shrink controla cómo los elementos deben reducirse en caso de que no haya suficiente espacio disponible.
+
+
+.elemento-flex {
+  flex-grow: 1; /* Todos los elementos flex crecerán igualmente para ocupar el espacio disponible */
+  flex-shrink: 0; /* Los elementos no se reducirán en tamaño si hay espacio insuficiente */
+}
+
+Orden de Elementos:
+
+    Puedes utilizar la propiedad order para cambiar el orden en el que se muestran los elementos hijos dentro del contenedor flex, independientemente de su orden en el código HTML.
+
+
+.elemento-flex {
+  order: 2; /* Cambia el orden de visualización del elemento */
+}
+
+Espaciado entre Elementos Hijos:
+
+    Con justify-content y align-items, también puedes controlar el espacio entre los elementos hijos utilizando propiedades como space-between, space-around, etc.
+
+
+.contenedor-flex {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
+}

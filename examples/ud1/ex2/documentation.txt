@@ -1,25 +1,3 @@
-Seguimos trabajando con float.
-
-La propiedad CSS float se utiliza para cambiar el comportamiento de posicionamiento de un elemento en relación con otros elementos en la página web. Es comúnmente utilizada para crear diseños de múltiples columnas, diseño de texto alrededor de imágenes o para lograr efectos de diseño específicos.
-
-El valor principal que puede tomar la propiedad float es uno de los siguientes:
-
-    left: El elemento se desplazará hacia la izquierda y permitirá que otros elementos fluyan alrededor de su lado derecho. Por ejemplo:
-
-.imagen-float {
-  float: left;
-}
-
-En este caso, si tienes un elemento de texto después de un elemento con la clase "imagen-float", el texto fluirá alrededor del lado derecho de la imagen.
-
-right: El elemento se desplazará hacia la derecha y permitirá que otros elementos fluyan alrededor de su lado izquierdo. Por ejemplo:
-
-    .imagen-float {
-      float: right;
-    }
-
-    En este caso, el texto fluirá alrededor del lado izquierdo de la imagen.
-
-Cuando aplicas la propiedad float a un elemento, ese elemento se elimina del flujo normal del documento, lo que significa que otros elementos pueden posicionarse alrededor de él según la dirección (izquierda o derecha) que hayas especificado. Sin embargo, ten en cuenta que el uso excesivo de float puede causar problemas de diseño, como la necesidad de borrar flotantes para evitar que los elementos posteriores se superpongan al elemento flotante.
-
-Para lidiar con algunos de los problemas que pueden surgir al usar float, se suelen utilizar técnicas adicionales como "clearing floats" (borrado de flotantes) mediante la propiedad clear. Esto ayuda a asegurarse de que los elementos posteriores no se vean afectados por los elementos flotantes anteriores.
+A partir del código HTML proporcionado, añadir las reglas CSS necesarias para que la página resultante tenga el mismo aspecto que el de la siguiente imagen.
+Aunque la propiedad que modifica el color del texto se explica detalladamente en los próximos capítulos, en este ejercicio solamente es preciso conocer que la propiedad se llama color y que como valor se puede indicar directamente el nombre del color.
+Los nombres de los colores también están estandarizados y se corresponden con el nombre en inglés de cada color. En este ejercicio, se deben utilizar los colores: teal, red, blue, orange, purple, olive, fuchsia y green.

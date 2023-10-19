@@ -1,0 +1,22 @@
+Crea una página web cuyo contenido sea la estructura básica de HTML5, con el siguiente
+aspecto.
+
+Los bloques de medios o media queries en el código CSS se utilizan para aplicar estilos específicos a diferentes tamaños de pantalla o dispositivos. En este código CSS, se proporcionan dos bloques de media queries, uno para dispositivos con un ancho mínimo de 768 píxeles (pantallas de escritorio o tablets) y otro que está actualmente comentado pero podría ser utilizado para dispositivos con un ancho mínimo de 600 píxeles (como tablets o pantallas de tamaño intermedio). Aquí está la explicación de ambos bloques de media queries:
+
+    Media Query para Pantallas de Escritorio o Tablets (Min-width: 768px):
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    /* ... (otros estilos de columnas) ... */
+    .col-12 {
+        width: 100%;
+    }
+}
+
+Este bloque de media query se activa cuando el ancho de la pantalla es igual o mayor a 768 píxeles. Dentro del bloque, se definen estilos específicos para las columnas con clases como .col-1, .col-2, y así sucesivamente. Cada clase de columna recibe un ancho en porcentaje correspondiente al sistema de grilla de 12 columnas. Esto significa que en pantallas de escritorio o tablets, las columnas se ajustarán a un sistema de grilla de 12 columnas, donde cada columna ocupa un cierto porcentaje del ancho de la pantalla.

@@ -1,50 +1,7 @@
-Formulario adaptado a smartphone:
-    Estilos del cuerpo (body):
-        background-color: Establece el color de fondo del cuerpo de la página en un tono azul (#59abe3).
-        margin: Elimina los márgenes predeterminados del cuerpo.
-        font-family: Define la fuente de texto utilizada en todo el cuerpo de la página como "Verdana" o una fuente genérica "sans-serif" si "Verdana" no está disponible.
+A partir del ejercicio anterior resuelto, determinar las reglas CSS necesarias para añadir los siguientes bordes:
 
-    Estilos del formulario (form):
-        background-color: Establece el color de fondo del formulario en gris claro (#e6e6e6).
-        width y height: Definen el ancho y la altura del formulario.
-        padding: Agrega un espacio interno alrededor del contenido del formulario.
-        border-radius: Aplica un borde redondeado al formulario.
-        position, left, right, top, transform, y margin: Centra verticalmente el formulario en el medio de la página utilizando CSS flexible.
-        box-shadow: Agrega una sombra alrededor del formulario para dar profundidad.
-
-    Estilos para el título del formulario (form h2):
-        color: Define el color del texto del título en gris (#78788c).
-        margin: Establece el margen del título.
-        padding-bottom y border-bottom: Crea una línea de borde inferior debajo del título.
-        display y padding-right: Hace que el título se muestre en línea y añade espacio a la derecha.
-        font-weight: Define el grosor de la fuente del título como normal.
-
-    Estilos para los párrafos en el formulario (form p):
-        border-bottom: Agrega una línea de borde inferior a los párrafos.
-        margin: Establece el margen vertical entre los párrafos.
-
-    Estilos para las etiquetas en el formulario (form label):
-        color: Define el color del texto de las etiquetas en gris (#6c6c6c).
-
-    Estilos para los campos de entrada en el formulario (form input):
-        border: Elimina el borde de los campos de entrada.
-        background-color: Establece el fondo de los campos de entrada como transparente.
-        padding: Agrega espacio interior a los campos de entrada.
-        text-indent: Indenta el texto dentro de los campos de entrada.
-        width: Define el ancho de los campos de entrada al 100%.
-
-    Estilos para el botón en el formulario (form button):
-        border: Establece un borde alrededor del botón.
-        background-color: Establece el fondo del botón como transparente.
-        padding: Agrega espacio interior al botón.
-        color: Define el color del texto del botón.
-        float: Hace que el botón flote a la derecha del formulario.
-
-    Estilos para el elemento <div> dentro del formulario (form div):
-        background-color: Establece el fondo del elemento <div> como gris oscuro (#50505a).
-        color: Define el color del texto dentro del elemento <div> como blanco.
-        padding, border-radius, position, right, width, bottom, y box-shadow: Establece la posición y los estilos del elemento <div>, creando un efecto visual distintivo en la parte inferior derecha del formulario.
-
-    Estilos para los íconos de fuente Awesome (form div .fa y .fa):
-        font-size: Establece el tamaño de fuente de los íconos.
-        .fa:last-of-type: Añade un margen izquierdo al último ícono para separarlo de los demás.
+1. Los elementos #noticias y #pie tiene un color de fondo gris claro (#F8F8F8). 
+2. El elemento #publicidad muestra un color de fondo amarillo claro (#FFF6CD). 
+3. Los elementos <h2> del lateral #secundario muestran un color de fondo #DB905C y un pequeño padding de .2em. 
+4. El fondo del elemento #menu se construye mediante una pequeña imagen llamada fondo_menu.gif. 
+5. El logotipo del sitio se muestra mediante una imagen de fondo del elemento <h1> contenido en el elemento #cabecera (la imagen se llama logo.gif).

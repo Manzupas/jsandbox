@@ -1,3 +1,21 @@
-A partir del código HTML proporcionado, añadir las reglas CSS necesarias para que la página resultante tenga el mismo aspecto que el de la siguiente imagen.
-Aunque la propiedad que modifica el color del texto se explica detalladamente en los próximos capítulos, en este ejercicio solamente es preciso conocer que la propiedad se llama color y que como valor se puede indicar directamente el nombre del color.
-Los nombres de los colores también están estandarizados y se corresponden con el nombre en inglés de cada color. En este ejercicio, se deben utilizar los colores: teal, red, blue, orange, purple, olive, fuchsia y green.
+Repasamos formularios, HTML:
+<form id="login">: Aquí se define el formulario con el identificador "login". Este formulario contiene elementos de entrada para el inicio de sesión.
+
+<h1>Log In</h1>: Es un encabezado que indica el propósito del formulario, que es iniciar sesión.
+
+<fieldset id="inputs">: Se utiliza para agrupar los campos de entrada (<input>) relacionados.
+
+<input>: Son campos de entrada de texto y contraseña con etiquetas de "Username" y "Password". Estos campos tienen atributos como id, type, placeholder, y required que los personalizan y hacen que sean obligatorios.
+
+<fieldset id="actions">: Este campo agrupa los elementos relacionados con las acciones del formulario, como el botón de inicio de sesión y los enlaces "Forgot your password?" y "Register".
+
+<input type="submit" id="submit" value="Log in">: Es un botón de envío que permite al usuario enviar los datos del formulario al servidor.
+
+<a href="">Forgot your password?</a> y <a href="">Register</a>: Son enlaces que permiten al usuario realizar acciones adicionales, como restablecer la contraseña o registrarse
+
+y CSS:
+    #login: Estilos aplicados al formulario con el identificador "login". Se le agrega una sombra y se ajusta su ancho y margen.
+
+    #login:before: Crea un efecto de borde punteado alrededor del formulario.
+
+    h1: Estilos aplicados al encabezado "Log In". Cambia su color, añade un efecto de sombra y aplica estilos de fuente.

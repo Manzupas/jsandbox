@@ -1,83 +1,97 @@
-#login{
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.2),
-				0 1px 1px rgba(0, 0, 0, .2),
-				0 3px 0 #fff,
-				0 4px 0 rgba(0, 0, 0, .2),
-				0 6px 0 #fff,
-				0 7px 0 rgba(0, 0, 0, .2);
-	z-index: 0;
-	padding: 20px;
-	 width : 400px;
-	 margin: 0 auto;
-	
+ul,
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none
 }
 
-#login:before{
-	content: '';
-	position: absolute;
-	z-index: -1;
-	border: 1px dashed #ccc;
-	top: 5px;
-	bottom: 5px;
-	left: 5px;
-	right: 5px;
-	box-shadow: 0 0 0 1px #fff;
+h1,
+h2,
+h3,
+p,
+form {
+    margin: 0;
+    padding: 0
 }
 
-h1 {
-	text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 
-				 0 2px 0 rgba(0, 0, 0, .5);
-	text-transform: uppercase;
-	text-align: center;
-	color: #666;
-	margin: 0 0 30px 0;
-	letter-spacing: 4px;
-	font: normal 26px/1 Verdana, Helvetica;
-	position: relative;
+.clear {
+    clear: both
 }
 
-#inputs input{
-	margin: 5px;
-	width:100%;
-	height: 25px;
-	border-radius:5px;
-	background-color: WhiteSmoke;
+img {
+    border: none
 }
 
-h1:after, h1:before {
-	background-color: #777;
-	content: "";
-	height: 1px;
-	position: absolute;
-	top: 15px;
-	width: 120px;
+#contenedor {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto
 }
 
-h1:after{
-	right: 0;
+#cabecera,
+#menu,
+#lateral,
+#contenido,
+#contenido #principal,
+#contenido #secundario,
+#pie {
+    border: 2px solid #777
 }
 
-h1:before{
-	background-image: linear-gradient(right, #777, #fff);
-	left: 0;
+#cabecera {
+    clear: both
 }
 
-fieldset {
-   border:0 none;
+#menu {
+    clear: both
 }
 
-#actions a{
-	float: right;
-	margin-left: 20px;
-	font-size: 14px;
-	padding: 15px 0;
+#lateral {
+    float: left;
+    width: 20%
 }
 
-#submit{
-	font-weight: bold;
-	border-radius:5px;
-	color: SaddleBrown;
-	background-color: Gold;
-	width:125px;
-	height: 40px;
+#contenido {
+    float: right;
+    width: 78%
+}
+
+#contenido #principal {
+    float: left;
+    width: 78%
+}
+
+#contenido #secundario {
+    float: right;
+    width: 20%
+}
+
+#pie {
+    clear: both
+}
+
+#cabecera #logo {
+    float: left
+}
+
+#cabecera #buscador {
+    float: right
+}
+
+#menu ul#menu_principal li {
+    display: inline;
+    float: left
+}
+
+#contenido #principal .articulo img {
+    width: 100px;
+    float: left
+}
+
+#pie .enlaces {
+    float: left
+}
+
+#pie .copyright {
+    float: right
 }
