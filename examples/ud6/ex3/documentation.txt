@@ -1,0 +1,23 @@
+
+    Estructura HTML:
+        Se utiliza una estructura HTML simple con una sección (<section>) que contiene un div con el id cube. Este div representa el cubo 3D.
+        El cubo se divide en seis caras diferentes, cada una contenida en un div con una clase que corresponde a la dirección de esa cara del cubo (front, back, right, left, top, bottom).
+
+    Estilos CSS:
+
+        Los estilos CSS definen cómo se ve y se comporta el cubo 3D. Aquí hay algunos puntos clave:
+
+        El cubo se coloca en una sección con una clase .container y se le da un tamaño fijo de 200x200 píxeles. Se aplica una perspectiva de 1000 píxeles para crear el efecto 3D.
+
+        El cubo en sí (#cube) se define con un estilo que le permite preservar la representación 3D y se anima con una transición de 6 segundos cuando se realiza un cambio en la transformación.
+
+        Cuando el cursor se encuentra sobre el cubo (#cube:hover), se aplica una animación llamada rotate que hace que el cubo rote sobre los ejes X y Y.
+
+        Cada cara del cubo (#cube div) tiene un fondo y un tamaño específico, así como estilos de fuente y alineación de texto. También contiene etiquetas <span> con clases .dot que representan puntos en esa cara.
+
+        La animación rotate utiliza @keyframes para definir la rotación del cubo desde 0 grados hasta 360 grados en los ejes X e Y.
+
+        Los puntos blancos (span.dot) en cada cara del cubo se posicionan en diferentes lugares usando las clases .dot1, .dot2, etc.
+
+    Interacción:
+        Cuando pasas el ratón sobre el cubo, se activa la animación de rotación, lo que da la impresión de que el cubo gira en el espacio.

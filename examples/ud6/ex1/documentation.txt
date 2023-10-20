@@ -1,0 +1,26 @@
+HTML:
+
+    Se define un section con la clase .container que contiene un div con el id tetraedro. Este div representa el tetraedro y está compuesto por cuatro caras triangulares.
+
+CSS:
+
+    Se establece la altura del cuerpo (body) y el elemento HTML (html) al 100% y se eliminan los márgenes para garantizar que el contenido se muestre correctamente en toda la ventana del navegador.
+
+    Se utiliza display: flex; en el cuerpo para centrar tanto horizontal como verticalmente el contenido dentro de la ventana del navegador.
+
+    El contenedor con la clase .container se establece en una posición relativa y se le da un tamaño de 19 rem (unidades de medida relativas) para crear un área de visualización para el tetraedro.
+
+    El div con el id tetraedro se anima con una rotación continua utilizando la animación rotate durante 5 segundos. También se le aplica transform-style: preserve-3d; para preservar la representación 3D.
+
+    La animación rotate define una rotación continua del tetraedro en los ejes Y, Z y X, dando la apariencia de un giro constante.
+
+    Las clases .triangulo definen las caras triangulares del tetraedro. Cada triángulo se crea mediante bordes transparentes y se establece en una posición absoluta.
+
+    Cada una de las cuatro clases .cara1, .cara2, .cara3 y .cara4 define las propiedades de una de las caras triangulares del tetraedro. Se ajusta el color de fondo y se aplican transformaciones 3D para posicionar y rotar cada cara correctamente.
+
+    .cara1 se rota y traslada para formar una de las caras del tetraedro.
+    .cara2 se rota y traslada para formar otra cara del tetraedro.
+    .cara3 se rota y traslada para formar la tercera cara del tetraedro.
+    .cara4 se rota y traslada para formar la base del tetraedro.
+
+En conjunto, el código crea un tetraedro 3D animado que gira constantemente en el espacio. Cada cara del tetraedro tiene un color de fondo diferente y se muestran de manera tridimensional debido a las transformaciones aplicadas en el espacio 3D.

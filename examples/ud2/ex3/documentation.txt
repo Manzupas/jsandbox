@@ -1,1 +1,15 @@
-Máscaras SVG para imágenes
+Máscaras SVG para imágenes.
+
+Partiendo del último ejemplo del ejercicio anterior, aquí tenemos más máscaras para imágenes con SVG.
+Todas explicadas específicamente en la web.
+
+
+Webs de referencia:
+https://www.html5rocks.com/en/tutorials/masking/adobe/#toc-masking
+http://habrahabr.ru/post/190246/
+https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-mask-image
+https://developer.mozilla.org/en-US/docs/Web/CSS/mask
+http://thenittygritty.co/css-masking
+http://stackoverflow.com/questions/18792402/css-webkit-mask-image
+https://developer.apple.com/library/safari/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Masks/Masks.html
+http://www.xiper.net/manuals/css-extensions/webkit/properties/webkit-mask.html

@@ -76,11 +76,11 @@
             },
             {
               "numero": "2",
-              "info": "Audio"
+              "info": "Máscaras con imágenes"
             },
             {
               "numero": "3",
-              "info": "Video"
+              "info": "Máscaras CSV"
             },
             {
               "numero": "4",
@@ -177,6 +177,10 @@
             {
               "numero": "11",
               "info": "Secciones"
+            },
+            {
+              "numero": "12",
+              "info": "EXTRA: Box Layout"
             }
           ]
         }
@@ -207,15 +211,15 @@
         "ejemplos": {
           "ej": [
             {
-              "numero": "2",
+              "numero": "1",
               "info": "Tetraedro"
             },
             {
-              "numero": "3",
+              "numero": "2",
               "info": "Teseracto"
             },
             {
-              "numero": "1",
+              "numero": "3",
               "info": "Dado "
             }
           ]
@@ -228,19 +232,7 @@
           "ej": [
             {
               "numero": "1",
-              "info": "Ejercicio Halloween "
-            },
-            {
-              "numero": "2",
-              "info": "Ejercicio Navidad"
-            },
-            {
-              "numero": "3",
-              "info": "Ejercicio BoxLayout"
-            },
-            {
-              "numero": "4",
-              "info": "Ejercicio Bola Navidad"
+              "info": "Libre "
             }
           ]
         }
@@ -260,10 +252,6 @@
             },
             {
               "numero": "3",
-              "info": "Ejercicio BoxLayout"
-            },
-            {
-              "numero": "4",
               "info": "Ejercicio Bola Navidad"
             }
           ]

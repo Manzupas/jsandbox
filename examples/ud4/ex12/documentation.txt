@@ -1,0 +1,27 @@
+Cuatro secciones que pueden expandirse al hacer clic en ellas. Cada sección se coloca inicialmente en un diseño de cuadrícula de dos por dos y, cuando se hace clic en una sección, se expande para cubrir toda la pantalla. 
+
+HTML:
+
+    El contenido principal está contenido en un <main> con la clase .main.
+    Hay cuatro secciones, cada una representada por un <section> con la clase .section.
+    Cada sección contiene dos elementos: un botón de cierre (<div> con la clase .close-section y un carácter "×" para representar una "X") y un cuadro de demostración (<div> con la clase .demo-box) que contiene un texto simple.
+
+JavaScript:
+
+    El código JavaScript gestiona la interacción de expansión y cierre de las secciones. Las secciones se abren al hacer clic y se cierran haciendo clic en el botón de cierre.
+
+CSS:
+
+    Se aplican estilos al diseño y la apariencia de las secciones y sus elementos relacionados. Algunos puntos clave incluyen:
+
+        Las secciones se posicionan de forma absoluta y tienen un ancho y alto inicial del 50% de la ventana del navegador.
+
+        Cuando una sección se expande (clase .is-expanded), ocupa toda la ventana y su z-index se establece en 1000 para estar por encima de las demás.
+
+        El botón de cierre tiene una posición absoluta en la esquina superior derecha de cada sección y no es visible hasta que una sección se expande (clase .section.is-expanded).
+
+        Se aplican transiciones para lograr animaciones suaves al expandir y cerrar las secciones.
+
+        El fondo y la apariencia de cada sección se configuran con colores y estilos.
+
+        Los estilos generales se aplican al cuerpo, la fuente y otros elementos.

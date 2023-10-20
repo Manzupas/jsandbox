@@ -1,0 +1,31 @@
+Teseracto:
+
+HTML:
+
+    Se define una estructura HTML con una sección (<section>) que contiene un div con la clase .cube y el id cube1. Este div representa el primer cubo.
+    Dentro del primer cubo, se crean seis divisiones adicionales (div) para representar las caras del cubo. Cada división tiene una clase correspondiente a la dirección de esa cara (front, back, right, left, top, bottom).
+    Luego, dentro del primer cubo (#cube1), se crea otro div con el id cube2 que se utiliza para el segundo cubo. Al igual que el primer cubo, el segundo cubo también tiene seis divisiones representando sus caras.
+
+CSS:
+
+    Se configura la altura del cuerpo (body) y el elemento HTML (html) al 100% y se eliminan los márgenes para asegurarse de que el contenido ocupe todo el espacio disponible en la ventana del navegador.
+
+    Se utiliza display: flex; en el cuerpo para centrar horizontal y verticalmente el contenido en la ventana del navegador.
+
+    Se aplican estilos de fuente a los encabezados (h1) para que estén centrados y utilicen la fuente Arial.
+
+    Se aplican transformaciones CSS a las caras de ambos cubos (cube .front, cube .back, etc.) para dar la apariencia de un objeto 3D. Cada transformación especifica una rotación en un eje particular y una traslación en el eje Z para crear una sensación de profundidad.
+
+    El contenedor con la clase .container se configura con una perspectiva de 1000 píxeles, lo que le da un aspecto tridimensional a los elementos 3D en su interior. Además, se establece un borde alrededor del contenedor.
+
+    Los cubos (cube) se definen como elementos con position: absolute; para permitir que se superpongan y se apliquen transformaciones 3D.
+
+    El primer cubo (#cube1) se anima con una rotación constante usando la animación rotate durante 10 segundos.
+
+    El segundo cubo (#cube2) se transforma en escala 3D y se traslada en el eje Y para cambiar su tamaño y posición con respecto al primer cubo.
+
+    Los estilos de fondo, sombra y fuente se aplican a las divisiones dentro de los cubos, y se les da un formato visual 3D.
+
+    Se define una animación vacía @keyframes identifier que no se utiliza en el código.
+
+    La animación rotate se utiliza para rotar el primer cubo sobre su eje Y desde 0 grados hasta 360 grados, creando un efecto de giro continuo.
