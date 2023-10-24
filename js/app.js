@@ -35,7 +35,11 @@
 //	QueryString.dark		bit que determina si al cargar se muesrta el tema oscuro.										//
 //								0-> muestra el tema claro.																	//
 //								1-> muestra el tema oscuro.																	//
-//								2-> muestra el tema de alto contraste para daltónicos.										//	
+//								2-> muestra el tema de alto contraste para daltónicos.	
+//	QueryString.fmwk		bit que determina si al cargar se incluye algún framework.										//
+//								0-> no se incluye nada.																	//
+//								1-> cargamos bootstrap.																	//
+//								2-> placeholder										//	
 //  QueryString.panels		mode determina qué paneles se muestran maximizados al cargar. Sus valores son seis bits 0 o 1. 	//
 //								0-> mostrar minimizado.																		//
 //								1-> mostrar maximizado.																		//
@@ -86,6 +90,7 @@ if (
 	QueryString.liveserver === undefined || QueryString.liveserver == "" ||
 	QueryString.view === undefined || QueryString.view == "" ||
 	QueryString.dark === undefined || QueryString.dark == "" ||
+	QueryString.fmwk === undefined || QueryString.fmwk == "" ||
 	QueryString.panels === undefined || QueryString.panels == "" ||
 	QueryString.panels.length != 6) {
 
@@ -97,6 +102,7 @@ if (
 	CONFIG.liveserver = "1";
 	CONFIG.view = "1";
 	CONFIG.dark = "1";
+	CONFIG.fmwk = "0";
 	CONFIG.panels = ["1", "1", "1", "1", "1", "1"];
 	CONFIG.panelsCode = ["1", "1", "1"];
 	CONFIG.numPanelsCode = 3;
@@ -122,6 +128,7 @@ if (
 		" frameborder='0' \n allowfullscreen='allowfullscreen'>\n</iframe>";
 
 }
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // INICIALIZACIÓN DE TODOS LOS PANELES A PARTIR DE :																		//
@@ -158,6 +165,8 @@ $(document).ready(function () {
 	const head = contents.find('head');
 	//Añadimos fontawesome para los ejercicios que lo usan:
 	head.html('<link rel="stylesheet" href="plugins/fontawesome/font-awesome.min.css">');
+	//Añadimos Bootstrap para los ejercicios que lo tienen marcado en el menú
+	if(CONFIG.fmwk=="1") $('<link rel="stylesheet" href="plugins/bootstrap/bootstrap.css">').appendTo(head);
 	const styleTag = $('<style></style>').appendTo(head);
 
 	// Cargamos los archivos desde la ruta indicada por los parámetros GET.
@@ -180,8 +189,7 @@ $(document).ready(function () {
 					unidad.ejemplos.ej.forEach(ejemplo => {
 						let ejercicioActual = "";
 						if (unidad.numero == CONFIG.ud && ejemplo.numero == CONFIG.ex) ejercicioActual = "class= 'actual'";
-
-
+						if(ejemplo.fmwk == undefined) ejemplo.fmwk = 0;
 
 						let enlaceEjemplo = "<li >"
 							+ "<a tabindex = '" + tabindex + "' href='index.html?"
@@ -193,6 +201,7 @@ $(document).ready(function () {
 							+ "liveserver=" + CONFIG.liveserver + "&"
 							+ "view=" + CONFIG.view + "&"
 							+ "dark=" + CONFIG.dark + "&"
+							+ "fmwk=" + ejemplo.fmwk + "&"
 							+ "panels=" + CONFIG.panels.join('')
 							+ "' " + ejercicioActual + " ><i class='fa fa-chevron-right' aria-hidden='true'></i>"
 							+ "EJ" + ejemplo.numero + ": " + ejemplo.info + "</a></li>";
@@ -377,6 +386,8 @@ $(document).ready(function () {
 		styleTag.text(editorCSS.getValue());
 		// Se incluye jquery también para que funcionen los ejemplos que lo usan.
 		let scriptjQueryTagBody = $('<script src="js/tools/jquery-3.6.0.min.js">').appendTo(body);
+		//Añadimos Bootstrap para los ejercicios que lo tengan marcado en el menú
+		if(CONFIG.fmwk=="1") $('<script src="plugins/bootstrap/bootstrap.bundle.js">').appendTo(body);
 		let scriptTagBody = $('<script>').appendTo(body);
 
 		// Si hay un error lo capturamos para mostrarlo también en la consola.
