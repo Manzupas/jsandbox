@@ -197,9 +197,11 @@ $(document).ready(function () {
 						if (ejemplo.fmwk == undefined) ejemplo.fmwk = 0;
 
 
+						//Separamos la creación del elemento lista y el enlace para poder usar el enlace en los botones siguiente y anterior según convenga.
+						let elementoEnlaceListaEjemplo = "<li >"
+							+ "<a tabindex='" + tabindex + "' href='";
 
-						let enlaceEjemplo = "<li >"
-							+ "<a tabindex='" + tabindex + "' href='index.html?"
+						let enlaceEjemplo = "index.html?"
 							+ "iframe=" + CONFIG.iframe + "&"
 							+ "ud=" + unidad.numero + "&"
 							+ "ex=" + ejemplo.numero + "&"
@@ -209,25 +211,16 @@ $(document).ready(function () {
 							+ "view=" + CONFIG.view + "&"
 							+ "dark=" + CONFIG.dark + "&"
 							+ "fmwk=" + ejemplo.fmwk + "&"
-							+ "panels=" + CONFIG.panels.join('')
-							+ "' " + ejercicioActual + " ><i class='fa fa-chevron-right' aria-hidden='true'></i>"
+							+ "panels=" + CONFIG.panels.join('');
+
+						elementoEnlaceListaEjemplo += enlaceEjemplo + "' " + ejercicioActual + " ><i class='fa fa-chevron-right' aria-hidden='true'></i>"
 							+ "EJ" + ejemplo.numero + ": " + ejemplo.info + "</a></li>";
 
 
 
 						//Si en la vuelta anterior hemos decidido que toca calcular el siguiente
 						if (tocaSiguiente == true) {
-							enlaceEjercicioSiguiente = "index.html?"
-								+ "iframe=" + CONFIG.iframe + "&"
-								+ "ud=" + unidad.numero + "&"
-								+ "ex=" + ejemplo.numero + "&"
-								+ "mode=" + CONFIG.mode + "&"
-								+ "runload=" + CONFIG.runload + "&"
-								+ "liveserver=" + CONFIG.liveserver + "&"
-								+ "view=" + CONFIG.view + "&"
-								+ "dark=" + CONFIG.dark + "&"
-								+ "fmwk=" + ejemplo.fmwk + "&"
-								+ "panels=" + CONFIG.panels.join('');
+							enlaceEjercicioSiguiente = enlaceEjemplo;
 							tocaSiguiente = false;
 						}
 
@@ -241,22 +234,12 @@ $(document).ready(function () {
 
 						//Calculamos el ejercicio anterior o dejamos de calcularlo
 						if (noMasAnterior == false) {
-							enlaceEjercicioAnterior = "index.html?"
-								+ "iframe=" + CONFIG.iframe + "&"
-								+ "ud=" + unidad.numero + "&"
-								+ "ex=" + ejemplo.numero + "&"
-								+ "mode=" + CONFIG.mode + "&"
-								+ "runload=" + CONFIG.runload + "&"
-								+ "liveserver=" + CONFIG.liveserver + "&"
-								+ "view=" + CONFIG.view + "&"
-								+ "dark=" + CONFIG.dark + "&"
-								+ "fmwk=" + ejemplo.fmwk + "&"
-								+ "panels=" + CONFIG.panels.join('');
+							enlaceEjercicioAnterior = enlaceEjemplo;
 						}
 
 
 
-						$("#menu").append(enlaceEjemplo);
+						$("#menu").append(elementoEnlaceListaEjemplo);
 						tabindex++;
 					});
 				});
