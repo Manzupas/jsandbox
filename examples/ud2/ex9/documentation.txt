@@ -1,0 +1,1 @@
+Una tarjeta es un contenedor de contenidos flexible y ampliable. Incluye opciones para encabezados y pies de página, una amplia variedad de contenidos, colores de fondo contextuales y potentes opciones de visualización.
