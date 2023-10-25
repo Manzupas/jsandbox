@@ -201,6 +201,7 @@ $(document).ready(function () {
 						let elementoEnlaceListaEjemplo = "<li >"
 							+ "<a tabindex='" + tabindex + "' href='";
 
+						//Creamos el enlace
 						let enlaceEjemplo = "index.html?"
 							+ "iframe=" + CONFIG.iframe + "&"
 							+ "ud=" + unidad.numero + "&"
@@ -226,10 +227,8 @@ $(document).ready(function () {
 
 						//Si hemos calculado el enlace del ejercicio ACTUAL, fijamos el ejercicio anterior y preparamos para el siguiente.
 						if ((unidad.numero == QueryString.ud) && (ejemplo.numero == QueryString.ex)) {
-							console.log(unidad.numero);
 							noMasAnterior = true;
 							tocaSiguiente = true;
-							console.log(noMasAnterior);
 						}
 
 						//Calculamos el ejercicio anterior o dejamos de calcularlo
