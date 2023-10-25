@@ -1,1 +1,9 @@
-Trabajo con Bootstrap
+Grid
+
+El trabajo en cuadrícula es la propiedad más importante que tiene Bootstrap, ya que nos resuelve el problema de visionado de elementos en diferentes resoluciones y dispositivos.
+
+¿Qué esto de Grid? Uno de los principales problemas que te encuentras al diseñar una web es el reparto del espacio en las diferentes resoluciones de pantalla. Normalmente, según la resolución de pantalla quieres que el contenido se muestre de una manera u otra.
+
+Grid permite definir comportamientos determinados a cada espacio y características de pantalla.
+
+Para solucionar el problema del reparto, Bootstrap divide la pantalla en una cuadrícula de 12 columnas. Para que después tú mismo puedas gestionar esas columnas según el tamaño de la pantalla en cuestión. Por ejemplo, un párrafo que un monitor de escritorio quieres que ocupe la mitad de la pantalla (12/2 = 6 columnas), pero en dispositivo móvil te interesa que ocupe toda la pantalla (12 columnas). Esto se conseguiría añadiendo un estilo para pantallas pequeñas y otro para las demás:

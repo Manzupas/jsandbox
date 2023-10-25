@@ -67,7 +67,7 @@
       },
       {
         "numero": "2",
-        "titulo": "Multimedia",
+        "titulo": "Multimedia y Bootstrap",
         "ejemplos": {
           "ej": [
             {
@@ -88,8 +88,23 @@
             },
             {
               "numero": "5",
-              "info": "Ejemplo Bootstrap",
-              "fmwk":"1"
+              "info": "Bootstrap: Grid",
+              "fmwk": "1"
+            },
+            {
+              "numero": "6",
+              "info": "Bootstrap: Grid 2",
+              "fmwk": "1"
+            },
+            {
+              "numero": "7",
+              "info": "Bootstrap: Navegación",
+              "fmwk": "1"
+            },
+            {
+              "numero": "8",
+              "info": "Bootstrap: Botones",
+              "fmwk": "1"
             }
           ]
         }

@@ -1,0 +1,10 @@
+El sistema de cuadrícula Bootstrap se divide en seis tamaños, con sus respectivos prefijos. Estos viene delimitados por el tamaño en píxeles de la pantalla:
+
+    .col-xs– : dispositivos extra pequeños – ancho de pantalla inferior a 576 px
+    .col-sm- :dispositivos pequeños – ancho de pantalla igual o superior a 576 px
+    .col-md- : dispositivos medianos – ancho de pantalla igual o mayor que 768 px
+    .col-lg- : dispositivos grandes – ancho de pantalla igual o mayor que 992 px
+    .col-xl- : dispositivos grandes – ancho de pantalla igual o mayor que 1200 px
+    .col-xxl- : dispositivos grandes – ancho de pantalla igual o mayor que 1400 px
+
+Después de cada prefijo habría que añadir el número de columnas que abarcaría esa resolución. Por ejemplo: col-xs-12

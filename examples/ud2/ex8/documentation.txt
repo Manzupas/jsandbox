@@ -1,0 +1,8 @@
+Te proporciona clases para realizar diferentes botones según su cometidos y estado:
+
+    Botones semánticos: botones con significado por sí mismo en su color. Rojo significa alerta, amarillo cuidado, etc.
+    Botones contorneados: perfectos para acciones secundarias.
+    Botones con estado: activado, desactivado, etc.
+    Botones con tamaño: grandes, pequeños, de bloque, etc.
+
+Todas estas clases además son aditivas, por lo que puedes ir añadiendo estados hasta conseguir el botón final que puedas necesitar.

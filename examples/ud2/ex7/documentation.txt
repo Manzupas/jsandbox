@@ -1,0 +1,2 @@
+Uno de los principales problemas que nos encontramos al diseñar una web es el menú. Un menú o barra de navegación es un encabezado que se coloca en la parte superior de la página. Además del problema del funcionamiento en dispositivos móviles (necesario que se compacte en un botón, para desplegar en móviles) existen muchas casuísticas interesantes que proporciona el propio Bootstrap en su código, como que se fije a la parte superior de la pantalla al hacer scroll.
+Este menú está preparado para funcionar perfectamente en dispositivos móviles y en el escritorio.
