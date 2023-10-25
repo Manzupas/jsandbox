@@ -155,6 +155,9 @@ var editorDEV;
 var editorEXERCISE;
 var textoConsola = "Mensajes de CONSOLA:\n>\n";
 var tabindex = 9; // contador para los tabindex de la página
+//Usados para calcular los enlaces del ejercicio anterior y siguiente.
+var enlaceEjercicioAnterior = undefined;
+var enlaceEjercicioSiguiente = undefined;
 
 $(document).ready(function () {
 
@@ -166,7 +169,7 @@ $(document).ready(function () {
 	//Añadimos fontawesome para los ejercicios que lo usan:
 	head.html('<link rel="stylesheet" href="plugins/fontawesome/font-awesome.min.css">');
 	//Añadimos Bootstrap para los ejercicios que lo tienen marcado en el menú
-	if(CONFIG.fmwk=="1") $('<link rel="stylesheet" href="plugins/bootstrap/bootstrap.css">').appendTo(head);
+	if (CONFIG.fmwk == "1") $('<link rel="stylesheet" href="plugins/bootstrap/bootstrap.css">').appendTo(head);
 	const styleTag = $('<style></style>').appendTo(head);
 
 	// Cargamos los archivos desde la ruta indicada por los parámetros GET.
@@ -180,19 +183,23 @@ $(document).ready(function () {
 			async: true,
 			success: (respuesta) => {
 				// Rellemanos el menú 
+				//Se usan para calcular los ejercicios anterior y siguiente
+				var tocaSiguiente = false;
+				var noMasAnterior = false;
+
 				respuesta['menu'].ud.forEach(unidad => {
 					let unidadTxt = "UD " + unidad.numero + ". " + unidad.titulo;
 					$("#menu").append("<li><h4>" + unidadTxt + "</h4></li>");
 
-
-
 					unidad.ejemplos.ej.forEach(ejemplo => {
 						let ejercicioActual = "";
 						if (unidad.numero == CONFIG.ud && ejemplo.numero == CONFIG.ex) ejercicioActual = "class= 'actual'";
-						if(ejemplo.fmwk == undefined) ejemplo.fmwk = 0;
+						if (ejemplo.fmwk == undefined) ejemplo.fmwk = 0;
+
+
 
 						let enlaceEjemplo = "<li >"
-							+ "<a tabindex = '" + tabindex + "' href='index.html?"
+							+ "<a tabindex='" + tabindex + "' href='index.html?"
 							+ "iframe=" + CONFIG.iframe + "&"
 							+ "ud=" + unidad.numero + "&"
 							+ "ex=" + ejemplo.numero + "&"
@@ -205,6 +212,49 @@ $(document).ready(function () {
 							+ "panels=" + CONFIG.panels.join('')
 							+ "' " + ejercicioActual + " ><i class='fa fa-chevron-right' aria-hidden='true'></i>"
 							+ "EJ" + ejemplo.numero + ": " + ejemplo.info + "</a></li>";
+
+
+
+						//Si en la vuelta anterior hemos decidido que toca calcular el siguiente
+						if (tocaSiguiente == true) {
+							enlaceEjercicioSiguiente = "index.html?"
+								+ "iframe=" + CONFIG.iframe + "&"
+								+ "ud=" + unidad.numero + "&"
+								+ "ex=" + ejemplo.numero + "&"
+								+ "mode=" + CONFIG.mode + "&"
+								+ "runload=" + CONFIG.runload + "&"
+								+ "liveserver=" + CONFIG.liveserver + "&"
+								+ "view=" + CONFIG.view + "&"
+								+ "dark=" + CONFIG.dark + "&"
+								+ "fmwk=" + ejemplo.fmwk + "&"
+								+ "panels=" + CONFIG.panels.join('');
+							tocaSiguiente = false;
+						}
+
+						//Si hemos calculado el enlace del ejercicio ACTUAL, fijamos el ejercicio anterior y preparamos para el siguiente.
+						if ((unidad.numero == QueryString.ud) && (ejemplo.numero == QueryString.ex)) {
+							console.log(unidad.numero);
+							noMasAnterior = true;
+							tocaSiguiente = true;
+							console.log(noMasAnterior);
+						}
+
+						//Calculamos el ejercicio anterior o dejamos de calcularlo
+						if (noMasAnterior == false) {
+							enlaceEjercicioAnterior = "index.html?"
+								+ "iframe=" + CONFIG.iframe + "&"
+								+ "ud=" + unidad.numero + "&"
+								+ "ex=" + ejemplo.numero + "&"
+								+ "mode=" + CONFIG.mode + "&"
+								+ "runload=" + CONFIG.runload + "&"
+								+ "liveserver=" + CONFIG.liveserver + "&"
+								+ "view=" + CONFIG.view + "&"
+								+ "dark=" + CONFIG.dark + "&"
+								+ "fmwk=" + ejemplo.fmwk + "&"
+								+ "panels=" + CONFIG.panels.join('');
+						}
+
+
 
 						$("#menu").append(enlaceEjemplo);
 						tabindex++;
@@ -387,7 +437,7 @@ $(document).ready(function () {
 		// Se incluye jquery también para que funcionen los ejemplos que lo usan.
 		let scriptjQueryTagBody = $('<script src="js/tools/jquery-3.6.0.min.js">').appendTo(body);
 		//Añadimos Bootstrap para los ejercicios que lo tengan marcado en el menú
-		if(CONFIG.fmwk=="1") $('<script src="plugins/bootstrap/bootstrap.bundle.js">').appendTo(body);
+		if (CONFIG.fmwk == "1") $('<script src="plugins/bootstrap/bootstrap.bundle.js">').appendTo(body);
 		let scriptTagBody = $('<script>').appendTo(body);
 
 		// Si hay un error lo capturamos para mostrarlo también en la consola.
@@ -441,11 +491,15 @@ $(document).ready(function () {
 	});
 
 	$("#back").click(function () {
-		alert("anterior ejercicio aún por desarrollar")
+		if (QueryString.ud != 0 && enlaceEjercicioAnterior != undefined) {
+			location.assign(enlaceEjercicioAnterior);
+		}
 	});
 
 	$("#next").click(function () {
-		alert("siguiente ejercicio aún por desarrollar")
+		if (enlaceEjercicioSiguiente != undefined) {
+			location.assign(enlaceEjercicioSiguiente);
+		}
 	});
 
 	$("#config").click(function () {
