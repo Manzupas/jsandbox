@@ -150,6 +150,10 @@
             {
               "numero": "8",
               "info": "Ficha fruta"
+            },
+            {
+              "numero": "9",
+              "info": "Memory Game"
             }
           ]
         }
