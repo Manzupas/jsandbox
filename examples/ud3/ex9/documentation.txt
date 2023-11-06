@@ -1,1 +1,2 @@
-Este ejercicio muestra un juego de cartas, en el que hay que dar la vuelta a las cartas y emparejarlas. Usa un poco de JavaScript para las comprobaciones.
+Se amplía el ejercicio Juego Pokémon. Usamos dos contadores y un botón para resetear el estado del ejercicio.
+Se puede implementar la aleatoriedad de las cartas y su orden.
