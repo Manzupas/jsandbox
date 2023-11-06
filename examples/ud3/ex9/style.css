@@ -1,6 +1,7 @@
 .baraja {
   width: 7.5in;
   margin: 20px auto;
+  max-width: 800px;
 }
 
 .carta {
@@ -8,15 +9,14 @@
   display: inline-block;
   position: relative;
   overflow: hidden;
-  width: 2.47in;
-  height: 3.5in;
+  width: 200px;
+  height: 279px;
   transition: all 0.5s;
 }
 
 .carta>div {
-
-  width: 2.5in;
-  height: 3.5in;
+  width: 200px;
+  height: 279px;
   position: absolute;
   top: 0;
   left: 0;
@@ -35,20 +35,45 @@
 }
 
 .anverso {
+  transform: rotateY(180deg);
   z-index: 0;
   transition: all 0.5s;
 }
 
-#pikachu .anverso {
-  background-image: url('./examples/ud3/ex7/img/pikachu.png');
+#karlach .anverso {
+  background-image: url('./examples/ud3/ex9/img/karlach.png');
 }
 
-#mimikyu .anverso {
-  background-image: url('./examples/ud3/ex7/img/mimikyu.png');
+#volo .anverso {
+  background-image: url('./examples/ud3/ex9/img/volo.png');
 }
 
-#mew .anverso {
-  background-image: url('./examples/ud3/ex7/img/mew.png');
+#shadowheart .anverso {
+  background-image: url('./examples/ud3/ex9/img/shadowheart.png');
+}
+
+#gale .anverso {
+  background-image: url('./examples/ud3/ex9/img/gale.png');
+}
+
+#halsin .anverso {
+  background-image: url('./examples/ud3/ex9/img/halsin.png');
+}
+
+#laezel .anverso {
+  background-image: url('./examples/ud3/ex9/img/laezel.png');
+}
+
+#minsc .anverso {
+  background-image: url('./examples/ud3/ex9/img/minsc.png');
+}
+
+#minthara .anverso {
+  background-image: url('./examples/ud3/ex9/img/minthara.png');
+}
+
+#jaheira .anverso {
+  background-image: url('./examples/ud3/ex9/img/jaheira.png');
 }
 
 .carta:hover {
