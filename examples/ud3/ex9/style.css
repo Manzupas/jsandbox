@@ -98,4 +98,6 @@
   z-index: 0;
 }
 
-.correcta {}
+h1, .controles{
+  text-align: center;
+}
