@@ -919,6 +919,9 @@ $(document).ready(function () {
 
 	$("#run").focus();
 
+
+	descarga_ejercicio();
+
 	// TO DO
 	/*
 	setTimeout(function () {
