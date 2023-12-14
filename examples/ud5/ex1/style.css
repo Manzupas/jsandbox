@@ -12,12 +12,12 @@ body {
 
 .div2 {
   height: 600px;
-  background-image: url('./examples/ud5/ex2/img/bg2.jpg');
+  background-image: url('./examples/ud5/ex1/img/bg2.jpg');
 }
 
 .div3 {
   height: 500px;
-  background-image: url('./examples/ud5/ex3/img/bg3.jpg');
+  background-image: url('./examples/ud5/ex1/img/bg3.jpg');
 }
 
 .parallax {
